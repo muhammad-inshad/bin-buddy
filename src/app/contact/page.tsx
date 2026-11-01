@@ -48,7 +48,7 @@ export default function ContactPage() {
         <h1 className="mt-3 text-3xl font-black text-foreground sm:text-5xl">
           We&apos;re Here to Help
         </h1>
-        <p className="mx-auto mt-3 max-w-xl text-sm sm:text-base text-foreground/65">
+        <p className="mx-auto mt-3 max-w-xl text-sm sm:text-base text-foreground/80">
           Questions about dustbins, booking an immediate pickup, or custom enterprise solutions?
           Reach out via the form or connect directly with our support team on WhatsApp.
         </p>
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <item.icon className="h-5 w-5" />
               </span>
               <div className="min-w-0 flex-1">
-                <div className="text-xs font-bold uppercase tracking-wider text-foreground/45">
+                <div className="text-xs font-bold uppercase tracking-wider text-foreground/75">
                   {item.label}
                 </div>
                 {item.href ? (

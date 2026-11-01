@@ -93,7 +93,7 @@ export default function ContactForm() {
         Send Message on WhatsApp
       </button>
 
-      <p className="text-center text-xs text-foreground/50">
+      <p className="text-center text-xs text-foreground/75">
         Our customer support team typically responds within a few minutes during business hours.
       </p>
     </form>

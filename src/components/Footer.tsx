@@ -38,7 +38,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/60 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/75 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
               >
                 <InstagramIcon className="h-4 w-4" />
               </a>
@@ -47,7 +47,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/60 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/75 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
               >
                 <FacebookIcon className="h-4 w-4" />
               </a>
@@ -56,7 +56,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/60 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/75 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
               >
                 <TwitterIcon className="h-4 w-4" />
               </a>
@@ -143,7 +143,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-foreground/50 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-foreground/75 sm:flex-row">
           <div>© {YEAR} Bin Buddy Private Limited. All rights reserved.</div>
           <div className="flex gap-6">
             <span>Eco-Friendly Waste Solutions</span>
