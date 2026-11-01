@@ -40,10 +40,12 @@ export default function ContactForm() {
         </label>
         <input
           id="c-name"
+          name="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Your name"
+          autoComplete="name"
           required
           className="mt-1.5 w-full min-h-[44px] rounded-xl border border-black/10 px-3.5 py-2.5 text-base sm:text-sm text-foreground outline-none transition-all focus:border-brand focus:ring-2 focus:ring-brand/20"
         />
@@ -55,10 +57,12 @@ export default function ContactForm() {
         </label>
         <input
           id="c-phone"
+          name="phone"
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder="e.g. 98765 43210"
+          autoComplete="tel"
           required
           className="mt-1.5 w-full min-h-[44px] rounded-xl border border-black/10 px-3.5 py-2.5 text-base sm:text-sm text-foreground outline-none transition-all focus:border-brand focus:ring-2 focus:ring-brand/20"
         />
@@ -70,6 +74,7 @@ export default function ContactForm() {
         </label>
         <textarea
           id="c-message"
+          name="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="How can we help? (e.g. bulk dustbins inquiry, society waste plan, pickup scheduling)"
@@ -87,6 +92,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
+        aria-label="Send message on WhatsApp"
         className="flex w-full min-h-[48px] items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-dark active:scale-[0.99]"
       >
         <MessageCircle className="h-5 w-5" />

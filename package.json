@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "not dead"
+  ],
   "dependencies": {
     "lucide-react": "^1.66.0",
     "next": "16.4.3",

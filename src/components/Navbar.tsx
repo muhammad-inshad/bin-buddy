@@ -58,7 +58,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -105,7 +105,7 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       {open && (
         <div className="fixed inset-x-0 bottom-0 top-[61px] z-50 flex flex-col bg-background/98 backdrop-blur-lg md:hidden">
-          <nav className="flex-1 overflow-y-auto px-5 py-6 space-y-1.5">
+          <nav className="flex-1 overflow-y-auto px-5 py-6 space-y-1.5" aria-label="Mobile navigation">
             {links.map((link) => {
               const isActive = pathname === link.href;
               return (
