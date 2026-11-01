@@ -26,6 +26,13 @@ export const metadata: Metadata = {
   title: "Bin Buddy — Bins & Waste Pickup Services",
   description:
     "Bin Buddy sells quality dustbins and offers home waste pickup, recycling, cleaning and junk removal services.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

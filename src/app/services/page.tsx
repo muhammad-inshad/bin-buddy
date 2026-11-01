@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MessageCircle, CheckCircle } from "lucide-react";
+import { MessageCircle, CheckCircle, Sparkles, ArrowRight } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import { services } from "@/lib/services";
 import { buildWhatsAppLink } from "@/lib/config";
@@ -29,6 +29,25 @@ export default function ServicesPage() {
           From scheduled weekly household waste pickups to full deep cleanings, garden debris clearance,
           and commercial enterprise plans — all bookable with zero friction on WhatsApp.
         </p>
+      </div>
+
+      {/* Kozhikode Local Spotlight Banner */}
+      <div className="mt-8 rounded-2xl border border-brand/20 bg-emerald-50/60 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
+        <div className="flex items-center gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-white shadow-sm">
+            <Sparkles className="h-5 w-5" />
+          </span>
+          <div>
+            <div className="text-xs font-bold uppercase tracking-wider text-brand">Local Spotlight · Kozhikode</div>
+            <div className="text-sm sm:text-base font-bold text-foreground">Looking for the Best House Cleaners in Kozhikode?</div>
+          </div>
+        </div>
+        <Link
+          href="/services/house-cleaning-kozhikode"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-brand px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-dark"
+        >
+          View Kozhikode Packages <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
 
       {/* Services Grid */}

@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Recycle, Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { buildWhatsAppLink } from "@/lib/config";
 
@@ -41,9 +42,16 @@ export default function Navbar() {
           className="flex items-center gap-2.5 transition-transform active:scale-95"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand text-white shadow-sm shadow-brand/20">
-            <Recycle className="h-5 w-5" />
-          </span>
+          <div className="relative h-10 w-10 overflow-hidden rounded-full shadow-md shadow-brand/20">
+            <Image
+              src="/icon.svg"
+              alt="Bin Buddy Logo"
+              width={40}
+              height={40}
+              priority
+              className="h-full w-full object-cover"
+            />
+          </div>
           <span className="text-xl font-black tracking-tight text-foreground">
             Bin<span className="text-brand">Buddy</span>
           </span>

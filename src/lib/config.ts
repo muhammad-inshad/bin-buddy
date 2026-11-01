@@ -7,7 +7,7 @@ export const siteConfig = {
   whatsappNumber: "919999999999",
   phoneDisplay: "+91 99999 99999",
   email: "hello@binbuddy.in",
-  address: "No. 12, Green Street, Koramangala, Bengaluru, Karnataka 560034",
+  address: "Near Mavoor Road Junction, Kozhikode, Kerala 673004",
   hours: "Mon – Sat, 8:00 AM – 7:00 PM",
   social: {
     instagram: "https://instagram.com/binbuddy",

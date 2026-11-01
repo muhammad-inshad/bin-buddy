@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Recycle, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { InstagramIcon, FacebookIcon, TwitterIcon } from "@/components/SocialIcons";
 import { siteConfig, buildWhatsAppLink } from "@/lib/config";
 
@@ -15,9 +16,15 @@ export default function Footer() {
           {/* Brand Col */}
           <div>
             <Link href="/" className="inline-flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-white shadow-sm">
-                <Recycle className="h-5 w-5" />
-              </span>
+              <div className="relative h-9 w-9 overflow-hidden rounded-full shadow-sm shadow-brand/20">
+                <Image
+                  src="/icon.svg"
+                  alt="Bin Buddy Logo"
+                  width={36}
+                  height={36}
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <span className="text-xl font-black tracking-tight text-foreground">
                 Bin<span className="text-brand">Buddy</span>
               </span>
@@ -68,6 +75,11 @@ export default function Footer() {
               <li>
                 <Link href="/services" className="transition-colors hover:text-brand">
                   Waste &amp; Pickup Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/house-cleaning-kozhikode" className="transition-colors hover:text-brand font-medium">
+                  House Cleaning (Kozhikode)
                 </Link>
               </li>
               <li>
