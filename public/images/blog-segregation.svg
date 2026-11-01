@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blog1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <filter id="blogShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#064e3b" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#blog1Bg)"/>
+  <circle cx="720" cy="80" r="120" fill="#10b981" fill-opacity="0.15"/>
+  <circle cx="80" cy="420" r="90" fill="#059669" fill-opacity="0.1"/>
+
+  <!-- Segregation Station in Modern Kitchen -->
+  <g transform="translate(130, 90)" filter="url(#blogShadow)">
+    <!-- Wet Waste Bin (Green) -->
+    <g transform="translate(0, 50)">
+      <rect x="20" y="70" width="130" height="180" rx="14" fill="#16a34a"/>
+      <path d="M 10 65 L 160 65 L 150 45 L 20 45 Z" fill="#15803d"/>
+      <circle cx="85" cy="140" r="28" fill="#dcfce7"/>
+      <!-- Apple Core / Organic Icon -->
+      <path d="M 85 125 C 80 120 72 130 75 145 C 78 155 85 158 85 158 C 85 158 92 155 95 145 C 98 130 90 120 85 125 Z" fill="#16a34a"/>
+      <text x="85" y="210" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">WET WASTE</text>
+      <text x="85" y="230" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#dcfce7" text-anchor="middle">Food &amp; Organic</text>
+    </g>
+
+    <!-- Dry / Recyclable Bin (Blue) -->
+    <g transform="translate(190, 50)">
+      <rect x="20" y="70" width="130" height="180" rx="14" fill="#0284c7"/>
+      <path d="M 10 65 L 160 65 L 150 45 L 20 45 Z" fill="#0369a1"/>
+      <circle cx="85" cy="140" r="28" fill="#e0f2fe"/>
+      <!-- Recycle loop -->
+      <path d="M 85 125 L 94 140 L 89 140 C 89 146 83 150 77 149 L 75 153 C 83 155 92 150 93 140 L 98 140 Z" fill="#0284c7"/>
+      <path d="M 73 134 L 82 149 L 79 152 C 75 155 69 151 68 145 L 64 146 C 66 154 73 159 81 155 L 83 158 Z" fill="#0284c7"/>
+      <text x="85" y="210" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">DRY WASTE</text>
+      <text x="85" y="230" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#e0f2fe" text-anchor="middle">Paper &amp; Plastic</text>
+    </g>
+
+    <!-- Hazardous / E-Waste Bin (Amber) -->
+    <g transform="translate(380, 50)">
+      <rect x="20" y="70" width="130" height="180" rx="14" fill="#d97706"/>
+      <path d="M 10 65 L 160 65 L 150 45 L 20 45 Z" fill="#b45309"/>
+      <circle cx="85" cy="140" r="28" fill="#fef3c7"/>
+      <!-- Battery / Plug Icon -->
+      <rect x="77" y="127" width="16" height="24" rx="3" fill="#d97706"/>
+      <rect x="81" y="123" width="8" height="4" rx="1" fill="#d97706"/>
+      <text x="85" y="210" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">E-WASTE</text>
+      <text x="85" y="230" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#fef3c7" text-anchor="middle">Batteries &amp; Tech</text>
+    </g>
+  </g>
+
+  <!-- Title / Badge overlay -->
+  <g transform="translate(250, 40)" filter="url(#blogShadow)">
+    <rect width="300" height="48" rx="24" fill="#ffffff"/>
+    <text x="150" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#15803d" text-anchor="middle">🌱 Source Segregation Guide</text>
+  </g>
+</svg>

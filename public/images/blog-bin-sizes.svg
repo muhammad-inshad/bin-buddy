@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sizeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdfa"/>
+      <stop offset="100%" stop-color="#ccfbf1"/>
+    </linearGradient>
+    <filter id="sizeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#134e4a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sizeBg)"/>
+  <circle cx="700" cy="100" r="150" fill="#0d9488" fill-opacity="0.1"/>
+
+  <!-- Ground Shelf Line -->
+  <line x1="60" y1="380" x2="740" y2="380" stroke="#99f6e4" stroke-width="4"/>
+
+  <!-- Bin 1: 5L Bedroom Bin -->
+  <g transform="translate(100, 240)" filter="url(#sizeShadow)">
+    <rect x="15" y="40" width="60" height="100" rx="8" fill="#14b8a6"/>
+    <path d="M 10 38 L 80 38 L 75 22 L 15 22 Z" fill="#0f766e"/>
+    <!-- Size Label -->
+    <rect x="10" y="150" width="70" height="28" rx="6" fill="#ffffff"/>
+    <text x="45" y="169" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f766e" text-anchor="middle">5 Litre</text>
+    <text x="45" y="195" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#115e59" text-anchor="middle">Bedroom / Bath</text>
+  </g>
+
+  <!-- Bin 2: 15L Everyday Bin -->
+  <g transform="translate(250, 190)" filter="url(#sizeShadow)">
+    <rect x="15" y="40" width="90" height="150" rx="10" fill="#0d9488"/>
+    <rect x="10" y="26" width="100" height="18" rx="5" fill="#115e59"/>
+    <!-- Pedal -->
+    <rect x="40" y="186" width="40" height="8" rx="2" fill="#334155"/>
+    <!-- Size Label -->
+    <rect x="25" y="200" width="70" height="28" rx="6" fill="#ffffff"/>
+    <text x="60" y="219" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f766e" text-anchor="middle">15 Litre</text>
+    <text x="60" y="245" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#115e59" text-anchor="middle">Kitchen / Hall</text>
+  </g>
+
+  <!-- Bin 3: 30L Large Household Bin -->
+  <g transform="translate(420, 140)" filter="url(#sizeShadow)">
+    <rect x="15" y="40" width="115" height="200" rx="12" fill="#0f766e"/>
+    <rect x="10" y="22" width="125" height="22" rx="6" fill="#134e4a"/>
+    <!-- Handles -->
+    <rect x="3" y="70" width="10" height="25" rx="3" fill="#134e4a"/>
+    <rect x="132" y="70" width="10" height="25" rx="3" fill="#134e4a"/>
+    <!-- Size Label -->
+    <rect x="38" y="250" width="70" height="28" rx="6" fill="#ffffff"/>
+    <text x="73" y="269" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f766e" text-anchor="middle">30 Litre</text>
+    <text x="73" y="295" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#115e59" text-anchor="middle">Family Home</text>
+  </g>
+
+  <!-- Bin 4: 120L Outdoor Wheelie Bin -->
+  <g transform="translate(600, 70)" filter="url(#sizeShadow)">
+    <polygon points="20,40 120,40 108,300 32,300" fill="#134e4a"/>
+    <path d="M 12 38 L 128 38 L 120 18 L 20 18 Z" fill="#042f2e"/>
+    <!-- Wheels -->
+    <circle cx="28" cy="305" r="16" fill="#1e293b"/>
+    <circle cx="28" cy="305" r="7" fill="#64748b"/>
+    <!-- Size Label -->
+    <rect x="35" y="320" width="75" height="28" rx="6" fill="#ffffff"/>
+    <text x="72" y="339" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0f766e" text-anchor="middle">120 Litre</text>
+    <text x="72" y="365" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#115e59" text-anchor="middle">Outdoor / Society</text>
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(260, 40)" filter="url(#sizeShadow)">
+    <rect width="280" height="44" rx="22" fill="#ffffff"/>
+    <text x="140" y="28" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f766e" text-anchor="middle">📏 Bin Capacity Sizing Guide</text>
+  </g>
+</svg>

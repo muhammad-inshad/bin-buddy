@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="officeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <filter id="offShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#14532d" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#officeBg)"/>
+  <circle cx="680" cy="120" r="140" fill="#15803d" fill-opacity="0.1"/>
+
+  <!-- Office Desk and Sorting Setup -->
+  <g transform="translate(140, 110)" filter="url(#offShadow)">
+    <!-- Modern Desk -->
+    <rect x="0" y="160" width="520" height="18" rx="4" fill="#334155"/>
+    <rect x="30" y="178" width="12" height="150" fill="#64748b"/>
+    <rect x="478" y="178" width="12" height="150" fill="#64748b"/>
+
+    <!-- Laptop on Desk -->
+    <rect x="180" y="125" width="80" height="35" rx="3" fill="#94a3b8"/>
+    <polygon points="170,160 270,160 260,158 180,158" fill="#cbd5e1"/>
+
+    <!-- Desk Plant -->
+    <polygon points="415,160 435,160 440,140 410,140" fill="#ffffff"/>
+    <circle cx="425" cy="125" r="14" fill="#16a34a"/>
+
+    <!-- Paper Shredder Bin under desk -->
+    <g transform="translate(60, 200)">
+      <rect x="0" y="0" width="85" height="120" rx="8" fill="#1e293b"/>
+      <rect x="10" y="10" width="65" height="10" rx="2" fill="#475569"/>
+      <!-- Shredded paper slot -->
+      <line x1="20" y1="15" x2="65" y2="15" stroke="#f8fafc" stroke-width="2"/>
+      <text x="42" y="80" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#94a3b8" text-anchor="middle">SHREDDER</text>
+    </g>
+
+    <!-- Dry Waste Bin under desk -->
+    <g transform="translate(190, 200)">
+      <rect x="0" y="0" width="85" height="120" rx="8" fill="#15803d"/>
+      <circle cx="42" cy="50" r="18" fill="#dcfce7"/>
+      <text x="42" y="55" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">♻</text>
+      <text x="42" y="90" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">RECYCLE</text>
+    </g>
+
+    <!-- E-Waste box under desk -->
+    <g transform="translate(320, 200)">
+      <rect x="0" y="0" width="85" height="120" rx="8" fill="#0284c7"/>
+      <rect x="25" y="40" width="35" height="22" rx="3" fill="#bae6fd"/>
+      <text x="42" y="90" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">E-WASTE</text>
+    </g>
+  </g>
+
+  <!-- Floating Badge -->
+  <g transform="translate(260, 45)" filter="url(#offShadow)">
+    <rect width="280" height="46" rx="23" fill="#ffffff"/>
+    <text x="140" y="29" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">🏢 Corporate Eco Compliance</text>
+  </g>
+</svg>

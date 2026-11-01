@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="compostBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7fee7"/>
+      <stop offset="100%" stop-color="#ecfccb"/>
+    </linearGradient>
+    <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="cShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#365314" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#compostBg)"/>
+  <circle cx="100" cy="80" r="130" fill="#84cc16" fill-opacity="0.12"/>
+  <circle cx="700" cy="420" r="160" fill="#65a30d" fill-opacity="0.1"/>
+
+  <!-- Compost cycle graphic -->
+  <g transform="translate(180, 80)" filter="url(#cShadow)">
+    <!-- Soil Mound / Base -->
+    <path d="M 40 330 Q 220 250 400 330 L 440 370 L 0 370 Z" fill="url(#soilGrad)" rx="10"/>
+
+    <!-- Countertop Compost Bin in Center -->
+    <g transform="translate(140, 110)">
+      <!-- Bin Body -->
+      <rect x="20" y="50" width="120" height="130" rx="16" fill="#65a30d"/>
+      <!-- Stainless steel lid and charcoal vent -->
+      <rect x="15" y="40" width="130" height="14" rx="4" fill="#475569"/>
+      <rect x="55" y="32" width="50" height="10" rx="5" fill="#334155"/>
+      <!-- Ventilation holes -->
+      <circle cx="70" cy="37" r="2" fill="#94a3b8"/>
+      <circle cx="80" cy="37" r="2" fill="#94a3b8"/>
+      <circle cx="90" cy="37" r="2" fill="#94a3b8"/>
+      <!-- Handle -->
+      <path d="M 25 50 Q 80 5 135 50" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+      <!-- Leaf badge on bin -->
+      <circle cx="80" cy="115" r="24" fill="#ffffff" fill-opacity="0.9"/>
+      <path d="M 80 102 C 68 102 68 118 80 128 C 92 118 92 102 80 102 Z" fill="#4d7c0f"/>
+    </g>
+
+    <!-- Growing Seedling / Plant out of compost soil -->
+    <g transform="translate(260, 220)">
+      <path d="M 80 80 Q 95 40 105 10" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/>
+      <!-- Leaves -->
+      <ellipse cx="120" cy="5" rx="18" ry="10" fill="#4ade80" transform="rotate(-25 120 5)"/>
+      <ellipse cx="90" cy="20" rx="16" ry="9" fill="#16a34a" transform="rotate(-65 90 20)"/>
+    </g>
+
+    <!-- Fruit peels / organic waste items being recycled -->
+    <g transform="translate(70, 250)">
+      <!-- Carrot top -->
+      <polygon points="20,20 35,45 10,40" fill="#ea580c"/>
+      <path d="M 20 20 L 12 10 M 20 20 L 22 8 M 20 20 L 30 12" stroke="#65a30d" stroke-width="3"/>
+      <!-- Apple peel -->
+      <path d="M 45 40 Q 60 25 75 35 Q 90 45 105 30" fill="none" stroke="#ef4444" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Circular Eco Badge -->
+  <g transform="translate(480, 70)" filter="url(#cShadow)">
+    <rect width="210" height="60" rx="30" fill="#ffffff"/>
+    <circle cx="32" cy="30" r="18" fill="#ecfccb"/>
+    <text x="32" y="36" font-size="20" text-anchor="middle">🍃</text>
+    <text x="65" y="27" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#365314">Zero Waste Habit</text>
+    <text x="65" y="44" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#65a30d">Organic Kitchen Composting</text>
+  </g>
+</svg>
