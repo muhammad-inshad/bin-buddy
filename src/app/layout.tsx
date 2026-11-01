@@ -22,6 +22,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://warm-liger-7e5ba3.netlify.app"),
   title: "Bin Buddy — Bins & Waste Pickup Services",
   description:
     "Bin Buddy sells quality dustbins and offers home waste pickup, recycling, cleaning and junk removal services.",
