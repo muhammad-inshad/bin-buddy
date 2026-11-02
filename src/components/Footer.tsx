@@ -74,7 +74,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services" className="transition-colors hover:text-brand">
-                  Waste &amp; Pickup Services
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/waste-pickup-kozhikode" className="transition-colors hover:text-brand font-medium">
+                  Waste Pickup (Kozhikode)
                 </Link>
               </li>
               <li>

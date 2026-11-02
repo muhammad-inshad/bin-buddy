@@ -5,8 +5,16 @@ import { Leaf, Users, Recycle, ShieldCheck, MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "About — Bin Friend",
-  description: "Learn about Bin Friend's mission to make waste management simple, reliable and sustainable.",
+  title: "About Bin Friend — Kozhikode's Waste Management & Pickup Service",
+  description:
+    "Learn about Bin Friend's mission based in Mankavu, Kozhikode (Calicut) to make doorstep waste pickup, recycling, and sustainable living simple and reliable across Kerala.",
+  keywords: [
+    "about bin friend",
+    "waste management kozhikode",
+    "waste pickup company calicut",
+    "mankavu waste collection",
+    "recycling service kozhikode",
+  ],
 };
 
 const values = [
@@ -41,14 +49,14 @@ export default function AboutPage() {
       <section className="bg-gradient-to-b from-brand-light/50 to-transparent py-12 sm:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <span className="inline-block rounded-full bg-brand-light px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-dark">
-            Our Mission &amp; Vision
+            Our Mission &amp; Kozhikode Roots
           </span>
           <h1 className="mt-3 text-3xl font-black text-foreground sm:text-5xl">
             About Bin Friend
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-foreground/70 leading-relaxed">
-            We started Bin Friend with a clear goal: make everyday waste management effortless,
-            transparent, and genuinely sustainable for modern homes and communities.
+            Headquartered in Mankavu, Kozhikode, Bin Friend was founded with a clear goal: make everyday doorstep waste management effortless,
+            transparent, and genuinely sustainable for Kozhikode homes and communities.
           </p>
         </div>
       </section>
@@ -60,22 +68,19 @@ export default function AboutPage() {
           <div>
             <div className="text-xs font-bold uppercase tracking-wider text-brand">The Journey</div>
             <h2 className="mt-1 text-2xl font-black text-foreground sm:text-4xl">
-              From Local Neighborhood to City-Wide Impact
+              From Kozhikode Neighborhoods to City-Wide Green Impact
             </h2>
             <div className="mt-4 space-y-4 text-sm sm:text-base text-foreground/70 leading-relaxed">
               <p>
-                Bin Friend began with a simple observation: millions of households want to segregate
-                and recycle their waste, but municipal collection infrastructure often makes it tedious,
-                unreliable, or confusing.
+                Bin Friend began right here in Kozhikode with a simple observation: thousands of families across Calicut want to segregate
+                and responsibly recycle their waste, but municipal collection schedules can be irregular or hard to coordinate.
               </p>
               <p>
                 We set out to remove every single friction point — pairing premium, purpose-built bins
-                for every room with punctual, WhatsApp-coordinated doorstep pickups.
+                for every room with punctual, WhatsApp-coordinated doorstep pickups throughout Kozhikode corporation zones.
               </p>
               <p>
-                Today, Bin Friend proudly serves thousands of households, residential societies, and
-                corporate offices across multiple cities, ensuring recyclable materials reach authorized
-                recycling channels instead of ending up in landfills.
+                Today, Bin Friend proudly serves households, housing societies, and offices across Mankavu, Mavoor Road, Nadakkavu, Chevayur, Medical College, and surrounding Calicut suburbs, ensuring recyclable materials reach authorized recycling channels instead of ending up in overburdened landfills.
               </p>
             </div>
 

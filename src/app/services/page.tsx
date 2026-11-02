@@ -6,8 +6,15 @@ import { services } from "@/lib/services";
 import { buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Services — Bin Friend",
-  description: "Home waste pickup, recycling, cleaning, yard clearing, junk removal and commercial waste plans.",
+  title: "Waste Pickup & Cleaning Services in Kozhikode | Bin Friend",
+  description:
+    "Home waste pickup, garbage collection, recycling, deep cleaning, yard clearing, junk removal and commercial waste plans in Kozhikode, Kerala.",
+  keywords: [
+    "waste pickup service in kozhikode",
+    "cleaning services kozhikode",
+    "garbage pickup calicut",
+    "doorstep waste collection kerala",
+  ],
 };
 
 export default function ServicesPage() {
@@ -31,23 +38,43 @@ export default function ServicesPage() {
         </p>
       </div>
 
-      {/* Kozhikode Local Spotlight Banner */}
-      <div className="mt-8 rounded-2xl border border-brand/20 bg-emerald-50/60 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
-        <div className="flex items-center gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-white shadow-sm">
-            <Sparkles className="h-5 w-5" />
-          </span>
-          <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-brand">Local Spotlight · Kozhikode</div>
-            <div className="text-sm sm:text-base font-bold text-foreground">Looking for the Best House Cleaners in Kozhikode?</div>
+      {/* Kozhikode Local Spotlight Banners */}
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="rounded-2xl border border-brand/20 bg-emerald-50/60 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-white shadow-sm">
+              <Sparkles className="h-5 w-5" />
+            </span>
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-brand">Kozhikode · Doorstep Collection</div>
+              <div className="text-sm sm:text-base font-bold text-foreground">Waste Pickup Service in Kozhikode</div>
+            </div>
           </div>
+          <Link
+            href="/services/waste-pickup-kozhikode"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-xs sm:text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-dark"
+          >
+            View Plans <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
-        <Link
-          href="/services/house-cleaning-kozhikode"
-          className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-brand px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-dark"
-        >
-          View Kozhikode Packages <ArrowRight className="h-4 w-4" />
-        </Link>
+
+        <div className="rounded-2xl border border-brand/20 bg-emerald-50/60 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-white shadow-sm">
+              <Sparkles className="h-5 w-5" />
+            </span>
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-brand">Kozhikode · Deep Clean</div>
+              <div className="text-sm sm:text-base font-bold text-foreground">House Cleaning in Kozhikode</div>
+            </div>
+          </div>
+          <Link
+            href="/services/house-cleaning-kozhikode"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-brand px-4 py-2 text-xs sm:text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-dark"
+          >
+            View Packages <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
 
       {/* Services Grid */}

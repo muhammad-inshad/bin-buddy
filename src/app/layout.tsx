@@ -25,9 +25,32 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://warm-liger-7e5ba3.netlify.app"),
-  title: "Bin Friend — Bins & Waste Pickup Services",
+  title: "Bin Friend — Waste Pickup & Cleaning Services in Kozhikode",
   description:
-    "Bin Friend sells quality dustbins and offers home waste pickup, recycling, cleaning and junk removal services.",
+    "Top-rated doorstep waste pickup, scrap recycling, quality dustbins and professional house cleaning services in Kozhikode (Calicut), Kerala. Book on WhatsApp: +91 70250 34758.",
+  keywords: [
+    "waste pickup service in kozhikode",
+    "waste pickup kozhikode",
+    "doorstep waste collection calicut",
+    "garbage pickup service kozhikode",
+    "scrap pickup kozhikode",
+    "house cleaning services in kozhikode",
+    "waste management kozhikode",
+    "dustbins kozhikode",
+    "bin friend kozhikode",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Bin Friend — Waste Pickup & Cleaning Services in Kozhikode",
+    description:
+      "Reliable doorstep waste collection, recycling, and deep house cleaning across Kozhikode (Calicut). Based in Mankavu. Same-day booking via WhatsApp.",
+    url: "https://warm-liger-7e5ba3.netlify.app/",
+    siteName: "Bin Friend",
+    locale: "en_IN",
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },

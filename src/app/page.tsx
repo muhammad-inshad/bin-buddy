@@ -25,7 +25,7 @@ export default function Home() {
             {/* Left Column: Headlines & CTA */}
             <div className="lg:col-span-7 text-left">
               <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/90 px-3.5 py-1.5 text-xs font-semibold text-brand-dark shadow-sm backdrop-blur">
-                <Leaf className="h-3.5 w-3.5 text-brand" /> Clean homes, greener planet
+                <Leaf className="h-3.5 w-3.5 text-brand" /> Serving Kozhikode (Calicut) &amp; Kerala
               </div>
 
               <h1 className="mt-5 text-3xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl sm:leading-[1.12]">
@@ -36,17 +36,17 @@ export default function Home() {
               </h1>
 
               <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/70 leading-relaxed">
-                Bin Friend sells premium, durable dustbins and provides doorstep waste pickup, recycling,
-                and cleaning services — all coordinated effortlessly via WhatsApp.
+                Bin Friend sells premium dustbins and provides doorstep waste pickup, garbage collection,
+                and deep cleaning services across Kozhikode — all coordinated effortlessly via WhatsApp.
               </p>
 
               {/* CTAs */}
               <div className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:items-center">
                 <Link
-                  href="/shop"
+                  href="/services/waste-pickup-kozhikode"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-bold text-white shadow-md shadow-brand/20 transition-all hover:bg-brand-dark hover:shadow-lg active:scale-95"
                 >
-                  Shop Bins <ArrowRight className="h-4 w-4" />
+                  Kozhikode Waste Pickup <ArrowRight className="h-4 w-4" />
                 </Link>
                 <a
                   href={whatsappUrl}
@@ -61,13 +61,13 @@ export default function Home() {
               {/* Trust Badges */}
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm font-medium text-foreground/75">
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> Same-week pickup
+                  <CheckCircle2 className="h-4 w-4 text-brand" /> Doorstep collection in Kozhikode
                 </span>
                 <span className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-brand" /> 100% verified recycling
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> No app installation needed
+                  <CheckCircle2 className="h-4 w-4 text-brand" /> Based in Mankavu, Calicut
                 </span>
               </div>
             </div>
