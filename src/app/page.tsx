@@ -10,7 +10,7 @@ import { buildWhatsAppLink } from "@/lib/config";
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
   const featuredServices = services.slice(0, 3);
-  const whatsappUrl = buildWhatsAppLink("Hi Bin Buddy! I'd like to book a doorstep waste pickup.");
+  const whatsappUrl = buildWhatsAppLink("Hi Bin Friend! I'd like to book a doorstep waste pickup.");
 
   return (
     <div className="w-full">
@@ -36,7 +36,7 @@ export default function Home() {
               </h1>
 
               <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/70 leading-relaxed">
-                Bin Buddy sells premium, durable dustbins and provides doorstep waste pickup, recycling,
+                Bin Friend sells premium, durable dustbins and provides doorstep waste pickup, recycling,
                 and cleaning services — all coordinated effortlessly via WhatsApp.
               </p>
 
@@ -235,7 +235,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="text-center">
           <div className="text-xs font-bold uppercase tracking-wider text-brand">Simple Workflow</div>
-          <h2 className="mt-1 text-2xl font-black text-foreground sm:text-4xl">How Bin Buddy Works</h2>
+          <h2 className="mt-1 text-2xl font-black text-foreground sm:text-4xl">How Bin Friend Works</h2>
           <p className="mx-auto mt-2 max-w-lg text-sm text-foreground/60">
             Booking a pickup takes under 60 seconds with no complex apps or long sign-ups.
           </p>

@@ -4,12 +4,12 @@ import ContactForm from "@/components/ContactForm";
 import { siteConfig, buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Bin Buddy",
-  description: "Get in touch with Bin Buddy for bins, pickups or custom waste management plans.",
+  title: "Contact Us — Bin Friend",
+  description: "Get in touch with Bin Friend for bins, pickups or custom waste management plans.",
 };
 
 export default function ContactPage() {
-  const whatsappUrl = buildWhatsAppLink("Hi Bin Buddy! I have a general query.");
+  const whatsappUrl = buildWhatsAppLink("Hi Bin Friend! I have a general query.");
 
   const info = [
     {

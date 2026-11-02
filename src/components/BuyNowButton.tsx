@@ -6,7 +6,7 @@ import type { Product } from "@/lib/products";
 
 export default function BuyNowButton({ product, className }: { product: Product; className?: string }) {
   function handleClick() {
-    const message = `Hi Bin Buddy! I'd like to buy the *${product.name}* (${product.capacity}) priced at ₹${product.price}. Please share payment & delivery details.`;
+    const message = `Hi Bin Friend! I'd like to buy the *${product.name}* (${product.capacity}) priced at ₹${product.price}. Please share payment & delivery details.`;
     window.open(buildWhatsAppLink(message), "_blank", "noopener,noreferrer");
   }
 

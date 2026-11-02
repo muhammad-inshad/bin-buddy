@@ -3,8 +3,8 @@ import BookPickupForm from "@/components/BookPickupForm";
 import { CheckCircle2, ShieldCheck, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Book Pickup — Bin Buddy",
-  description: "Book a waste pickup with Bin Buddy. Share your details and confirm instantly on WhatsApp.",
+  title: "Book Pickup — Bin Friend",
+  description: "Book a waste pickup with Bin Friend. Share your details and confirm instantly on WhatsApp.",
 };
 
 export default function BookPage() {

@@ -13,7 +13,7 @@ import {
 import { buildWhatsAppLink, siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Best House Cleaning Services in Kozhikode | Bin Buddy",
+  title: "Best House Cleaning Services in Kozhikode | Bin Friend",
   description:
     "Top-rated professional house cleaning in Kozhikode (Calicut). Deep home cleaning, kitchen & bathroom sanitization, villa cleaning from ₹2,499. Book instantly on WhatsApp!",
   keywords: [
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     canonical: "/services/house-cleaning-kozhikode",
   },
   openGraph: {
-    title: "Best House Cleaning Services in Kozhikode | Bin Buddy",
+    title: "Best House Cleaning Services in Kozhikode | Bin Friend",
     description:
       "Professional deep house cleaning, kitchen scrubbing & bathroom descaling across Kozhikode. Trained staff, eco-friendly agents, transparent rates.",
     url: "https://warm-liger-7e5ba3.netlify.app/services/house-cleaning-kozhikode",
-    siteName: "Bin Buddy",
+    siteName: "Bin Friend",
     locale: "en_IN",
     type: "website",
     images: [
@@ -114,7 +114,7 @@ const reviews = [
     name: "Dr. Anoop Nambiar",
     area: "Mavoor Road, Kozhikode",
     rating: 5,
-    text: "Booked Bin Buddy for our 3BHK flat near Mavoor Road before shifting. The 3-member team arrived strictly on time with heavy machines. Bathrooms and kitchen look brand new!",
+    text: "Booked Bin Friend for our 3BHK flat near Mavoor Road before shifting. The 3-member team arrived strictly on time with heavy machines. Bathrooms and kitchen look brand new!",
   },
   {
     name: "Fathima Suhara",
@@ -151,14 +151,14 @@ const faqs = [
 
 export default function HouseCleaningKozhikodePage() {
   const whatsappUrl = buildWhatsAppLink(
-    "Hi Bin Buddy! I'm looking for house cleaning services in Kozhikode. Please share availability and details."
+    "Hi Bin Friend! I'm looking for house cleaning services in Kozhikode. Please share availability and details."
   );
 
   // Schema.org structured data for Google local search
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CleaningService",
-    name: "Bin Buddy House Cleaning Services Kozhikode",
+    name: "Bin Friend House Cleaning Services Kozhikode",
     image: "https://warm-liger-7e5ba3.netlify.app/images/service-house-deep-cleaning.jpg",
     telephone: siteConfig.phoneDisplay,
     priceRange: "₹1899 - ₹4999",
@@ -209,7 +209,7 @@ export default function HouseCleaningKozhikodePage() {
               </h1>
 
               <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/70 leading-relaxed">
-                Looking for reliable, professional house cleaners in Kozhikode? Bin Buddy delivers
+                Looking for reliable, professional house cleaners in Kozhikode? Bin Friend delivers
                 thorough deep cleaning for apartments, independent houses, and villas with background-verified staff and eco-friendly products.
               </p>
 
@@ -336,7 +336,7 @@ export default function HouseCleaningKozhikodePage() {
 
               <a
                 href={buildWhatsAppLink(
-                  `Hi Bin Buddy! I would like to book the "${pkg.name}" for my house in Kozhikode.`
+                  `Hi Bin Friend! I would like to book the "${pkg.name}" for my house in Kozhikode.`
                 )}
                 target="_blank"
                 rel="noopener noreferrer"

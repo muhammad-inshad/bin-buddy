@@ -2,7 +2,7 @@
 // IMPORTANT: Replace whatsappNumber with your real WhatsApp Business number
 // (country code + number, no spaces, no "+"), e.g. "919876543210".
 export const siteConfig = {
-  name: "Bin Buddy",
+  name: "Bin Friend",
   tagline: "Smart bins. Cleaner spaces.",
   whatsappNumber: "917025034758",
   phoneDisplay: "+91 70250 34758",
@@ -10,9 +10,9 @@ export const siteConfig = {
   address: "Mankavu, Kozhikode, Kerala 673007",
   hours: "Mon – Sun, 9:00 AM – 9:00 PM",
   social: {
-    instagram: "https://instagram.com/binbuddy",
-    facebook: "https://facebook.com/binbuddy",
-    twitter: "https://twitter.com/binbuddy",
+    instagram: "https://instagram.com/binfriend",
+    facebook: "https://facebook.com/binfriend",
+    twitter: "https://twitter.com/binfriend",
   },
 };
 

@@ -25,9 +25,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://warm-liger-7e5ba3.netlify.app"),
-  title: "Bin Buddy — Bins & Waste Pickup Services",
+  title: "Bin Friend — Bins & Waste Pickup Services",
   description:
-    "Bin Buddy sells quality dustbins and offers home waste pickup, recycling, cleaning and junk removal services.",
+    "Bin Friend sells quality dustbins and offers home waste pickup, recycling, cleaning and junk removal services.",
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  name: "bin buddy",
+  name: "Bin Friend",
   image: "https://warm-liger-7e5ba3.netlify.app/icon.svg",
   url: "https://warm-liger-7e5ba3.netlify.app/",
   telephone: "7025034758",

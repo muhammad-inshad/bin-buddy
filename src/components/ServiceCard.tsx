@@ -7,7 +7,7 @@ import { buildWhatsAppLink } from "@/lib/config";
 
 export default function ServiceCard({ service }: { service: Service }) {
   const whatsappUrl = buildWhatsAppLink(
-    `Hi Bin Buddy! I'd like to book the "${service.name}" service (${service.priceLabel}). Could you share available slots?`
+    `Hi Bin Friend! I'd like to book the "${service.name}" service (${service.priceLabel}). Could you share available slots?`
   );
 
   return (

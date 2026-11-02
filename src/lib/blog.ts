@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Waste segregation doesn't need extra effort once you set up the right bins. Here's how to get it right from day one.",
     date: "2026-09-02",
-    author: "Bin Buddy Team",
+    author: "Bin Friend Team",
     category: "Home Tips",
     color: "#16a34a",
     image: "/images/blog-segregation.svg",
@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
       "3. Rinse containers before tossing them in the recycling bin; food residue contaminates entire batches.",
       "4. Use a small bin for e-waste and batteries — never mix these with regular trash.",
       "5. Schedule a regular pickup so bins don't overflow and segregation habits don't break down.",
-      "A Bin Buddy pickup plan takes care of step five automatically — book a slot and we handle the rest.",
+      "A Bin Friend pickup plan takes care of step five automatically — book a slot and we handle the rest.",
     ],
   },
   {
@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Nearly half of household waste is organic. Composting it keeps landfills lighter and your garden healthier.",
     date: "2026-08-14",
-    author: "Bin Buddy Team",
+    author: "Bin Friend Team",
     category: "Sustainability",
     color: "#65a30d",
     image: "/images/blog-compost.svg",
@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Too small and it overflows daily. Too large and it attracts odour. Here's a quick guide to sizing bins correctly.",
     date: "2026-07-22",
-    author: "Bin Buddy Team",
+    author: "Bin Friend Team",
     category: "Buying Guide",
     color: "#0d9488",
     image: "/images/blog-bin-sizes.svg",
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Offices generate more paper and e-waste than homes. A simple pickup schedule prevents it from piling up unnoticed.",
     date: "2026-06-30",
-    author: "Bin Buddy Team",
+    author: "Bin Friend Team",
     category: "Business",
     color: "#15803d",
     image: "/images/blog-office.svg",

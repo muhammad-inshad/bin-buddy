@@ -4,8 +4,8 @@ import { products } from "@/lib/products";
 import { ShieldCheck, Truck, RefreshCw, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shop Bins — Bin Buddy",
-  description: "Browse Bin Buddy's range of dustbins — from compact bedroom bins to outdoor wheelie bins.",
+  title: "Shop Bins — Bin Friend",
+  description: "Browse Bin Friend's range of dustbins — from compact bedroom bins to outdoor wheelie bins.",
 };
 
 export default function ShopPage() {

@@ -17,8 +17,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) return { title: "Post not found — Bin Buddy" };
-  return { title: `${post.title} — Bin Buddy`, description: post.excerpt };
+  if (!post) return { title: "Post not found — Bin Friend" };
+  return { title: `${post.title} — Bin Friend`, description: post.excerpt };
 }
 
 export default async function BlogPostPage({
@@ -31,7 +31,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const whatsappUrl = buildWhatsAppLink(
-    `Hi Bin Buddy! I read your article "${post.title}" and would like to learn about your pickup services.`
+    `Hi Bin Friend! I read your article "${post.title}" and would like to learn about your pickup services.`
   );
 
   return (
@@ -100,7 +100,7 @@ export default async function BlogPostPage({
           Want help managing your home or office waste?
         </h2>
         <p className="mx-auto mt-2 max-w-lg text-sm text-foreground/65">
-          Bin Buddy makes waste segregation simple with quality color-coded dustbins and scheduled
+          Bin Friend makes waste segregation simple with quality color-coded dustbins and scheduled
           WhatsApp-coordinated doorstep pickups.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">

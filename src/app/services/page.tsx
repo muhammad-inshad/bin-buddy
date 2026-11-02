@@ -6,13 +6,13 @@ import { services } from "@/lib/services";
 import { buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Services — Bin Buddy",
+  title: "Services — Bin Friend",
   description: "Home waste pickup, recycling, cleaning, yard clearing, junk removal and commercial waste plans.",
 };
 
 export default function ServicesPage() {
   const customQuoteUrl = buildWhatsAppLink(
-    "Hi Bin Buddy! I'm interested in a custom waste management plan for my home/building. Can you share details?"
+    "Hi Bin Friend! I'm interested in a custom waste management plan for my home/building. Can you share details?"
   );
 
   return (

@@ -7,7 +7,7 @@ import { siteConfig, buildWhatsAppLink } from "@/lib/config";
 const YEAR = 2026;
 
 export default function Footer() {
-  const whatsappUrl = buildWhatsAppLink("Hi Bin Buddy! I'd like to ask a question.");
+  const whatsappUrl = buildWhatsAppLink("Hi Bin Friend! I'd like to ask a question.");
 
   return (
     <footer className="border-t border-black/8 bg-white">
@@ -19,14 +19,14 @@ export default function Footer() {
               <div className="relative h-9 w-9 overflow-hidden rounded-full shadow-sm shadow-brand/20">
                 <Image
                   src="/icon.svg"
-                  alt="Bin Buddy Logo"
+                  alt="Bin Friend Logo"
                   width={36}
                   height={36}
                   className="h-full w-full object-cover"
                 />
               </div>
               <span className="text-xl font-black tracking-tight text-foreground">
-                Bin<span className="text-brand">Buddy</span>
+                Bin<span className="text-brand">Friend</span>
               </span>
             </Link>
             <p className="mt-3.5 max-w-xs text-sm text-foreground/65 leading-relaxed">
@@ -144,7 +144,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-foreground/75 sm:flex-row">
-          <div>© {YEAR} Bin Buddy Private Limited. All rights reserved.</div>
+          <div>© {YEAR} Bin Friend Private Limited. All rights reserved.</div>
           <div className="flex gap-6">
             <span>Eco-Friendly Waste Solutions</span>
             <span>Zero Landfill Mission</span>

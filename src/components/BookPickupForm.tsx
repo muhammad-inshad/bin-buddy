@@ -24,7 +24,7 @@ export default function BookPickupForm() {
     setError("");
 
     const lines = [
-      `Hi Bin Buddy! I'd like to book a pickup.`,
+      `Hi Bin Friend! I'd like to book a pickup.`,
       ``,
       `*Name:* ${name}`,
       `*Phone:* ${phone}`,

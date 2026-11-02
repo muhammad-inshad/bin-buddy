@@ -5,8 +5,8 @@ import { Leaf, Users, Recycle, ShieldCheck, MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "About — Bin Buddy",
-  description: "Learn about Bin Buddy's mission to make waste management simple, reliable and sustainable.",
+  title: "About — Bin Friend",
+  description: "Learn about Bin Friend's mission to make waste management simple, reliable and sustainable.",
 };
 
 const values = [
@@ -33,7 +33,7 @@ const values = [
 ];
 
 export default function AboutPage() {
-  const whatsappUrl = buildWhatsAppLink("Hi Bin Buddy! I'd like to learn more about your services.");
+  const whatsappUrl = buildWhatsAppLink("Hi Bin Friend! I'd like to learn more about your services.");
 
   return (
     <div className="w-full">
@@ -44,10 +44,10 @@ export default function AboutPage() {
             Our Mission &amp; Vision
           </span>
           <h1 className="mt-3 text-3xl font-black text-foreground sm:text-5xl">
-            About Bin Buddy
+            About Bin Friend
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-foreground/70 leading-relaxed">
-            We started Bin Buddy with a clear goal: make everyday waste management effortless,
+            We started Bin Friend with a clear goal: make everyday waste management effortless,
             transparent, and genuinely sustainable for modern homes and communities.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             </h2>
             <div className="mt-4 space-y-4 text-sm sm:text-base text-foreground/70 leading-relaxed">
               <p>
-                Bin Buddy began with a simple observation: millions of households want to segregate
+                Bin Friend began with a simple observation: millions of households want to segregate
                 and recycle their waste, but municipal collection infrastructure often makes it tedious,
                 unreliable, or confusing.
               </p>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 for every room with punctual, WhatsApp-coordinated doorstep pickups.
               </p>
               <p>
-                Today, Bin Buddy proudly serves thousands of households, residential societies, and
+                Today, Bin Friend proudly serves thousands of households, residential societies, and
                 corporate offices across multiple cities, ensuring recyclable materials reach authorized
                 recycling channels instead of ending up in landfills.
               </p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="relative aspect-4/3 w-full overflow-hidden bg-slate-50">
               <Image
                 src="/images/about-story.svg"
-                alt="Bin Buddy eco logistics mission"
+                alt="Bin Friend eco logistics mission"
                 fill
                 className="object-contain p-2 sm:p-4"
                 sizes="(max-width: 1024px) 100vw, 550px"

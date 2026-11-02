@@ -5,8 +5,8 @@ import { ArrowRight, Calendar, User } from "lucide-react";
 import { blogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog & Eco Guides — Bin Buddy",
-  description: "Tips on waste segregation, composting, bin sizing, and sustainable living from the Bin Buddy team.",
+  title: "Blog & Eco Guides — Bin Friend",
+  description: "Tips on waste segregation, composting, bin sizing, and sustainable living from the Bin Friend team.",
 };
 
 export default function BlogPage() {
@@ -18,7 +18,7 @@ export default function BlogPage() {
           Articles &amp; Guides
         </span>
         <h1 className="mt-3 text-3xl font-black text-foreground sm:text-5xl">
-          Bin Buddy Eco Blog
+          Bin Friend Eco Blog
         </h1>
         <p className="mx-auto mt-3 max-w-xl text-sm sm:text-base text-foreground/65">
           Practical advice and guides on household waste segregation, odour-free composting,

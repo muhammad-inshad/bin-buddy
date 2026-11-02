@@ -19,7 +19,7 @@ export default function ContactForm() {
     setError("");
 
     const text = [
-      `Hi Bin Buddy! I have an inquiry.`,
+      `Hi Bin Friend! I have an inquiry.`,
       ``,
       `*Name:* ${name}`,
       `*Phone:* ${phone}`,

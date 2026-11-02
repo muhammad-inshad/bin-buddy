@@ -19,7 +19,7 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const whatsappUrl = buildWhatsAppLink("Hi Bin Buddy! I'd like to book a pickup.");
+  const whatsappUrl = buildWhatsAppLink("Hi Bin Friend! I'd like to book a pickup.");
 
   // Prevent scroll when mobile menu is open
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Navbar() {
           <div className="relative h-10 w-10 overflow-hidden rounded-full shadow-md shadow-brand/20">
             <Image
               src="/icon.svg"
-              alt="Bin Buddy Logo"
+              alt="Bin Friend Logo"
               width={40}
               height={40}
               priority
@@ -53,7 +53,7 @@ export default function Navbar() {
             />
           </div>
           <span className="text-xl font-black tracking-tight text-foreground">
-            Bin<span className="text-brand">Buddy</span>
+            Bin<span className="text-brand">Friend</span>
           </span>
         </Link>
 

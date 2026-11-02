@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="binBuddyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="binFriendGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#22c55e"/>
       <stop offset="50%" stop-color="#16a34a"/>
       <stop offset="100%" stop-color="#15803d"/>
@@ -19,7 +19,7 @@
   </defs>
 
   <!-- Circular Outer Rounded Container -->
-  <circle cx="256" cy="256" r="236" fill="url(#binBuddyGrad)"/>
+  <circle cx="256" cy="256" r="236" fill="url(#binFriendGrad)"/>
   <circle cx="256" cy="256" r="230" fill="none" stroke="#86efac" stroke-width="6" opacity="0.4"/>
 
   <!-- Logo Icon Glyph Group -->
