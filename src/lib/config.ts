@@ -4,10 +4,10 @@
 export const siteConfig = {
   name: "Bin Buddy",
   tagline: "Smart bins. Cleaner spaces.",
-  whatsappNumber: "919999999999",
-  phoneDisplay: "+91 99999 99999",
-  email: "hello@binbuddy.in",
-  address: "Near Mavoor Road Junction, Kozhikode, Kerala 673004",
+  whatsappNumber: "917025034758",
+  phoneDisplay: "+91 70250 34758",
+  email: "minshad430@gmail.com",
+  address: "Mankavu, Kozhikode, Kerala 673007",
   hours: "Mon – Sat, 8:00 AM – 7:00 PM",
   social: {
     instagram: "https://instagram.com/binbuddy",

@@ -40,6 +40,28 @@ export const metadata: Metadata = {
   },
 };
 
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  name: "Bin Buddy",
+  url: "https://warm-liger-7e5ba3.netlify.app/",
+  image: "https://warm-liger-7e5ba3.netlify.app/icon.svg",
+  telephone: "+917025034758",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Mankavu",
+    addressLocality: "Kozhikode",
+    postalCode: "673007",
+    addressCountry: "IN",
+    addressRegion: "Kerala",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 11.2404392,
+    longitude: 75.8156257,
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -50,6 +72,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-brand-light selection:text-brand-dark">
         <Navbar />
         <main className="flex-1 w-full">{children}</main>
