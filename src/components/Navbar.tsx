@@ -34,7 +34,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/5 bg-background/95 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-black/5 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         {/* Brand Logo */}
         <Link
@@ -95,41 +95,109 @@ export default function Navbar() {
           type="button"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
-          className="flex h-11 w-11 items-center justify-center rounded-xl bg-black/5 text-foreground transition-colors hover:bg-brand-light hover:text-brand active:scale-95 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-foreground transition-colors hover:bg-brand-light hover:text-brand active:scale-95 md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Full-Screen Drawer Menu */}
       {open && (
-        <div className="fixed inset-x-0 bottom-0 top-[61px] z-50 flex flex-col bg-background/98 backdrop-blur-lg md:hidden">
-          <nav className="flex-1 overflow-y-auto px-5 py-6 space-y-1.5" aria-label="Mobile navigation">
-            {links.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={`flex items-center justify-between rounded-2xl px-4 py-3.5 text-base font-bold transition-all ${
-                    isActive
-                      ? "bg-brand text-white shadow-md shadow-brand/20"
-                      : "text-foreground/80 hover:bg-brand-light/50 hover:text-brand"
-                  }`}
-                >
-                  <span>{link.label}</span>
-                  {isActive && <span className="h-2 w-2 rounded-full bg-white" />}
-                </Link>
-              );
-            })}
+        <div className="fixed inset-0 z-[100] flex flex-col bg-white md:hidden">
+          {/* Top Bar inside Drawer */}
+          <div className="flex items-center justify-between border-b border-black/5 px-4 py-3 sm:px-6">
+            <Link
+              href="/"
+              className="flex items-center gap-2.5"
+              onClick={() => setOpen(false)}
+            >
+              <div className="relative h-10 w-10 overflow-hidden rounded-full shadow-md shadow-brand/20">
+                <Image
+                  src="/icon.svg"
+                  alt="Bin Friend Logo"
+                  width={40}
+                  height={40}
+                  priority
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <span className="text-xl font-black tracking-tight text-foreground">
+                Bin<span className="text-brand">Friend</span>
+              </span>
+            </Link>
 
-            <div className="pt-6 border-t border-black/10 mt-6 space-y-3">
+            <button
+              type="button"
+              aria-label="Close navigation menu"
+              className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-foreground transition-colors hover:bg-brand-light hover:text-brand active:scale-95"
+              onClick={() => setOpen(false)}
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Scrollable Nav Area */}
+          <nav className="flex-1 overflow-y-auto px-5 py-5 space-y-1" aria-label="Mobile navigation">
+            <div className="space-y-1">
+              {links.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-bold transition-all ${
+                      isActive
+                        ? "bg-brand text-white shadow-sm"
+                        : "text-foreground hover:bg-slate-100"
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                    {isActive && <span className="h-2 w-2 rounded-full bg-white" />}
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Kozhikode Special Services */}
+            <div className="pt-4 mt-4 border-t border-black/5 space-y-1.5">
+              <div className="px-4 text-xs font-bold uppercase tracking-wider text-brand">
+                Kozhikode Services
+              </div>
+              <Link
+                href="/services/waste-pickup-kozhikode"
+                onClick={() => setOpen(false)}
+                className={`flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition-all ${
+                  pathname === "/services/waste-pickup-kozhikode"
+                    ? "bg-brand text-white font-bold"
+                    : "text-foreground hover:bg-emerald-50 bg-emerald-50/50"
+                }`}
+              >
+                <span>Doorstep Waste Pickup (Kozhikode)</span>
+                <span className="rounded-full bg-brand-light px-2 py-0.5 text-[11px] font-bold text-brand-dark">
+                  Popular
+                </span>
+              </Link>
+              <Link
+                href="/services/house-cleaning-kozhikode"
+                onClick={() => setOpen(false)}
+                className={`flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition-all ${
+                  pathname === "/services/house-cleaning-kozhikode"
+                    ? "bg-brand text-white font-bold"
+                    : "text-foreground hover:bg-slate-100"
+                }`}
+              >
+                <span>House Cleaning (Kozhikode)</span>
+              </Link>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="pt-5 border-t border-black/5 mt-5 space-y-3">
               <Link
                 href="/book"
                 onClick={() => setOpen(false)}
-                className="flex w-full items-center justify-center rounded-2xl bg-brand py-3.5 text-center text-sm font-bold text-white shadow-md"
+                className="flex w-full items-center justify-center rounded-xl bg-brand py-3.5 text-center text-sm font-bold text-white shadow-md active:scale-95"
               >
                 Book Pickup Form
               </Link>
@@ -138,10 +206,15 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-brand/20 bg-white py-3.5 text-center text-sm font-bold text-brand-dark shadow-sm"
+                className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-brand/30 bg-white py-3.5 text-center text-sm font-bold text-brand-dark shadow-sm active:scale-95"
               >
-                <MessageCircle className="h-4 w-4" /> Message on WhatsApp
+                <MessageCircle className="h-4 w-4 text-brand" /> Message on WhatsApp
               </a>
+            </div>
+
+            {/* Hub info footer */}
+            <div className="pt-4 text-center text-xs text-foreground/60">
+              Hub: Mankavu, Kozhikode · Tel: +91 70250 34758
             </div>
           </nav>
         </div>
