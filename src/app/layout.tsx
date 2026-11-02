@@ -43,10 +43,11 @@ export const metadata: Metadata = {
 const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  name: "Bin Buddy",
-  url: "https://warm-liger-7e5ba3.netlify.app/",
+  name: "bin buddy",
   image: "https://warm-liger-7e5ba3.netlify.app/icon.svg",
-  telephone: "+917025034758",
+  url: "https://warm-liger-7e5ba3.netlify.app/",
+  telephone: "7025034758",
+  openingHours: "Mo-Su 09:00-21:00",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Mankavu",

@@ -8,7 +8,7 @@ export const siteConfig = {
   phoneDisplay: "+91 70250 34758",
   email: "minshad430@gmail.com",
   address: "Mankavu, Kozhikode, Kerala 673007",
-  hours: "Mon – Sat, 8:00 AM – 7:00 PM",
+  hours: "Mon – Sun, 9:00 AM – 9:00 PM",
   social: {
     instagram: "https://instagram.com/binbuddy",
     facebook: "https://facebook.com/binbuddy",
