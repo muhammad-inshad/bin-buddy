@@ -1,3 +1,4 @@
+
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -53,9 +54,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     shortcut: "/icon.svg",
     apple: "/icon.svg",
   },
@@ -71,7 +70,7 @@ const businessJsonLd = {
   image: "https://warm-liger-7e5ba3.netlify.app/icon.svg",
   url: "https://warm-liger-7e5ba3.netlify.app/",
   telephone: "7025034758",
-   "priceRange": "2000",
+  priceRange: "2000",
   openingHours: "Mo-Su 09:00-21:00",
   address: {
     "@type": "PostalAddress",
@@ -100,44 +99,40 @@ export default function RootLayout({
     >
       <head>
         {/* Google Tag Manager */}
-<Script id="google-tag-manager" strategy="beforeInteractive">
-  {`
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MKWXKLCT');
-  `}
-</Script>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
-        />
-        {/* Google Analytics 4 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FBTWW31Z33"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
+          id="google-tag-manager"
+          strategy="beforeInteractive"
+        >
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-FBTWW31Z33');
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MKWXKLCT');
           `}
         </Script>
+
+        {/* Business Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(businessJsonLd),
+          }}
+        />
       </head>
+
       <body className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-brand-light selection:text-brand-dark">
+        {/* Google Tag Manager (noscript) */}
         <noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXKLCT"
-    height="0"
-    width="0"
-    style={{ display: "none", visibility: "hidden" }}
-  />
-</noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MKWXKLCT"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         <Navbar />
         <main className="flex-1 w-full">{children}</main>
         <Footer />
