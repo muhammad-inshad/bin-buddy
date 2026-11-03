@@ -39,9 +39,9 @@ export default function Home() {
               </div>
 
               <h1 className="mt-5 text-3xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl sm:leading-[1.12]">
-                Bins that fit your home. <br />
+                Waste Collection, Home Cleaning and <br className="hidden sm:inline" />
                 <span className="text-brand bg-gradient-to-r from-brand to-emerald-600 bg-clip-text text-transparent">
-                  Pickups that fit your life.
+                  Dustbin Services in Kozhikode
                 </span>
               </h1>
 
