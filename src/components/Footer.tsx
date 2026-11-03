@@ -15,11 +15,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand Col */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2.5">
+            <Link href="/" aria-label="Bin Friend homepage" className="inline-flex items-center gap-2.5">
               <div className="relative h-9 w-9 overflow-hidden rounded-full shadow-sm shadow-brand/20">
                 <Image
                   src="/icon.svg"
-                  alt="Bin Friend Logo"
+                  alt=""
+                  aria-hidden="true"
                   width={36}
                   height={36}
                   className="h-full w-full object-cover"
@@ -65,7 +66,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-foreground">Explore</h3>
+            <p className="text-sm font-bold uppercase tracking-wider text-foreground">Explore</p>
             <ul className="mt-4 space-y-2.5 text-sm font-medium text-foreground/85">
               <li>
                 <Link href="/shop" className="transition-colors hover:text-brand">
@@ -102,7 +103,7 @@ export default function Footer() {
 
           {/* Customer Support */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-foreground">Booking &amp; Support</h3>
+            <p className="text-sm font-bold uppercase tracking-wider text-foreground">Booking &amp; Support</p>
             <ul className="mt-4 space-y-2.5 text-sm font-medium text-foreground/85">
               <li>
                 <Link href="/book" className="transition-colors hover:text-brand">
@@ -119,9 +120,9 @@ export default function Footer() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-brand font-semibold hover:underline"
+                  className="inline-flex items-center gap-1.5 text-brand-dark font-semibold hover:underline"
                 >
-                  <MessageCircle className="h-4 w-4" /> WhatsApp Support
+                  <MessageCircle className="h-4 w-4 text-brand" aria-hidden="true" /> WhatsApp Support
                 </a>
               </li>
             </ul>
@@ -129,18 +130,18 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-foreground">Get In Touch</h3>
+            <p className="text-sm font-bold uppercase tracking-wider text-foreground">Get In Touch</p>
             <ul className="mt-4 space-y-3 text-sm text-foreground/85">
               <li className="flex items-start gap-2.5">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
                 <span className="font-medium">{siteConfig.phoneDisplay}</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
                 <span className="font-medium">{siteConfig.email}</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" aria-hidden="true" />
                 <span>{siteConfig.address}</span>
               </li>
             </ul>

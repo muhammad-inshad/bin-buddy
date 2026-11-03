@@ -1,19 +1,13 @@
 
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
 });
@@ -147,27 +141,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
+      className={`${geistSans.variable} h-full antialiased scroll-smooth`}
     >
       <head>
         {/* Preconnect & DNS prefetch for Google Tag Manager */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-        {/* Google Tag Manager (afterInteractive prevents blocking main thread) */}
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-        >
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MKWXKLCT');
-          `}
-        </Script>
 
         {/* Business Structured Data */}
         <script
@@ -179,6 +158,21 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-brand-light selection:text-brand-dark">
+        {/* Google Tag Manager (lazyOnload defers until browser is idle) */}
+        <Script
+          id="google-tag-manager"
+          strategy="lazyOnload"
+        >
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MKWXKLCT');
+          `}
+        </Script>
+
         {/* Skip to Main Content Link for Keyboard Accessibility */}
         <a href="#main-content" className="skip-link">
           Skip to main content

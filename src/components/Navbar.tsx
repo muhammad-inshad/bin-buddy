@@ -41,13 +41,15 @@ export default function Navbar() {
           {/* Brand Logo */}
           <Link
             href="/"
+            aria-label="Bin Friend homepage"
             className="flex items-center gap-2.5 transition-transform active:scale-95"
             onClick={() => setOpen(false)}
           >
             <div className="relative h-10 w-10 overflow-hidden rounded-full shadow-md shadow-brand/20">
               <Image
                 src="/icon.svg"
-                alt="Bin Friend Logo"
+                alt=""
+                aria-hidden="true"
                 width={40}
                 height={40}
                 priority
@@ -99,6 +101,7 @@ export default function Navbar() {
             type="button"
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={open}
+            aria-controls="mobile-navigation-drawer"
             className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-foreground transition-colors hover:bg-brand-light hover:text-brand active:scale-95 md:hidden"
             onClick={() => setOpen((v) => !v)}
           >
@@ -109,19 +112,27 @@ export default function Navbar() {
 
       {/* Mobile Full-Screen Overlay Drawer (placed OUTSIDE <header> to prevent iOS Safari clipping) */}
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-white md:hidden animate-in fade-in duration-200">
+        <div
+          id="mobile-navigation-drawer"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+          className="fixed inset-0 z-50 flex flex-col bg-white md:hidden animate-in fade-in duration-200"
+        >
           {/* Top Bar with Safe Area Inset Support */}
           <div className="pt-[env(safe-area-inset-top)] border-b border-black/5 bg-white">
             <div className="flex items-center justify-between px-4 py-3 sm:px-6">
               <Link
                 href="/"
+                aria-label="Bin Friend homepage"
                 className="flex items-center gap-2.5"
                 onClick={() => setOpen(false)}
               >
                 <div className="relative h-10 w-10 overflow-hidden rounded-full shadow-md shadow-brand/20">
                   <Image
                     src="/icon.svg"
-                    alt="Bin Friend Logo"
+                    alt=""
+                    aria-hidden="true"
                     width={40}
                     height={40}
                     priority
@@ -139,7 +150,7 @@ export default function Navbar() {
                 className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-foreground transition-colors hover:bg-brand-light hover:text-brand active:scale-95"
                 onClick={() => setOpen(false)}
               >
-                <X className="h-6 w-6" />
+                <X className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -170,7 +181,7 @@ export default function Navbar() {
 
             {/* Kozhikode Services Highlight */}
             <div className="pt-3 border-t border-black/5 space-y-1.5">
-              <div className="px-4 text-xs font-bold uppercase tracking-wider text-brand">
+              <div className="px-4 text-xs font-bold uppercase tracking-wider text-brand-dark">
                 Kozhikode Services
               </div>
               <Link
@@ -222,12 +233,12 @@ export default function Navbar() {
                 }}
                 className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-brand/30 bg-white py-3 text-center text-sm font-bold text-brand-dark shadow-sm active:scale-95"
               >
-                <MessageCircle className="h-4 w-4 text-brand" /> Message on WhatsApp
+                <MessageCircle className="h-4 w-4 text-brand" aria-hidden="true" /> Message on WhatsApp
               </a>
             </div>
 
             {/* Hub info footer */}
-            <div className="pt-2 text-center text-xs text-foreground/60">
+            <div className="pt-2 text-center text-xs text-foreground/85 font-medium">
               Hub: Mankavu, Kozhikode · Tel: +91 70250 34758
             </div>
           </div>
