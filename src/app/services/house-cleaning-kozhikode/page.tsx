@@ -272,7 +272,7 @@ export default function HouseCleaningKozhikodePage() {
               <div className="relative overflow-hidden rounded-3xl border border-black/8 bg-white p-3 shadow-xl">
                 <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-slate-100">
                   <Image
-                    src="/images/service-house-deep-cleaning.jpg"
+                    src="/images/service-house-deep-cleaning.webp"
                     alt="Professional house cleaning service in Kozhikode"
                     fill
                     priority

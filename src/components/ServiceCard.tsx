@@ -39,16 +39,16 @@ export default function ServiceCard({ service }: { service: Service }) {
         <h3 className="text-lg font-bold text-foreground group-hover:text-brand transition-colors">
           {service.name}
         </h3>
-        <p className="mt-2 text-sm text-foreground/65 leading-relaxed">
+        <p className="mt-2 text-sm text-foreground/85 leading-relaxed">
           {service.description}
         </p>
 
         {/* Feature details */}
         {service.details && service.details.length > 0 && (
-          <ul className="mt-4 space-y-2 border-t border-black/5 pt-4 text-xs text-foreground/75">
+          <ul className="mt-4 space-y-2 border-t border-black/5 pt-4 text-xs text-foreground/85">
             {service.details.map((detail, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" />
+                <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" aria-hidden="true" />
                 <span>{detail}</span>
               </li>
             ))}
@@ -67,10 +67,10 @@ export default function ServiceCard({ service }: { service: Service }) {
           </a>
           <Link
             href="/book"
-            className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/70 transition-colors hover:bg-brand-light hover:text-brand"
-            title="Book Online Form"
+            aria-label={`Book ${service.name} online form`}
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/80 transition-colors hover:bg-brand-light hover:text-brand"
           >
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
       </div>

@@ -45,7 +45,7 @@ export default function Home() {
                 </span>
               </h1>
 
-              <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/70 leading-relaxed">
+              <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/85 leading-relaxed">
                 Bin Friend sells premium dustbins and provides doorstep waste pickup, garbage collection,
                 and deep cleaning services across Kozhikode — all coordinated effortlessly via WhatsApp.
               </p>
@@ -56,7 +56,7 @@ export default function Home() {
                   href="/services/waste-pickup-kozhikode"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-bold text-white shadow-md shadow-brand/20 transition-all hover:bg-brand-dark hover:shadow-lg active:scale-95"
                 >
-                  Kozhikode Waste Pickup <ArrowRight className="h-4 w-4" />
+                  Kozhikode Waste Pickup <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
                 <a
                   href={whatsappUrl}
@@ -64,20 +64,20 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-brand/30 bg-white px-7 py-3.5 text-sm font-bold text-brand-dark transition-all hover:border-brand hover:bg-brand-light/50 active:scale-95 shadow-sm"
                 >
-                  <MessageCircle className="h-4 w-4 text-brand" /> Book on WhatsApp
+                  <MessageCircle className="h-4 w-4 text-brand" aria-hidden="true" /> Book on WhatsApp
                 </a>
               </div>
 
               {/* Trust Badges */}
-              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm font-medium text-foreground/75">
+              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm font-semibold text-foreground/85">
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> Doorstep collection in Kozhikode
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> Doorstep collection in Kozhikode
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> 100% verified recycling
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> 100% verified recycling
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> Based in Mankavu, Calicut
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> Based in Mankavu, Calicut
                 </span>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function Home() {
                 <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white p-3 shadow-xl sm:p-4">
                   <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-slate-100">
                     <Image
-                      src="/images/service-home-waste-pickup.jpg"
+                      src="/images/service-home-waste-pickup.webp"
                       alt="Doorstep Waste Pickup in action"
                       fill
                       priority
@@ -137,11 +137,11 @@ export default function Home() {
                 {/* Floating Social Proof Pill */}
                 <div className="absolute -bottom-4 -left-3 sm:-left-6 flex items-center gap-3 rounded-2xl border border-black/5 bg-white/95 px-4 py-2.5 shadow-lg backdrop-blur">
                   <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-light text-brand">
-                    <Sparkles className="h-5 w-5" />
+                    <Sparkles className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div>
                     <div className="text-xs font-black text-foreground">Local Mankavu Team</div>
-                    <div className="text-[11px] text-foreground/60">Serving Kozhikode Homes Daily</div>
+                    <div className="text-[11px] text-foreground/80 font-medium">Serving Kozhikode Homes Daily</div>
                   </div>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function Home() {
           ].map((s) => (
             <div key={s.label} className="text-center p-2">
               <div className="text-2xl font-black text-brand sm:text-3xl lg:text-4xl">{s.value}</div>
-              <div className="mt-1 text-xs sm:text-sm font-medium text-foreground/60">{s.label}</div>
+              <div className="mt-1 text-xs sm:text-sm font-semibold text-foreground/80">{s.label}</div>
             </div>
           ))}
         </div>
@@ -175,7 +175,7 @@ export default function Home() {
             <h2 className="mt-1 text-2xl font-black tracking-tight text-foreground sm:text-4xl">
               Popular Bins for Every Space
             </h2>
-            <p className="mt-2 text-sm text-foreground/60">
+            <p className="mt-2 text-sm text-foreground/85">
               Durable, odour-resistant dustbins crafted for compact bathrooms to full outdoor yards.
             </p>
           </div>
@@ -183,7 +183,7 @@ export default function Home() {
             href="/shop"
             className="hidden items-center gap-1.5 text-sm font-bold text-brand hover:text-brand-dark sm:inline-flex"
           >
-            View all bins <ArrowRight className="h-4 w-4" />
+            View all bins <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
 
@@ -212,7 +212,7 @@ export default function Home() {
               <h2 className="mt-1 text-2xl font-black tracking-tight text-foreground sm:text-4xl">
                 Waste &amp; Cleaning Services
               </h2>
-              <p className="mt-2 text-sm text-foreground/60">
+              <p className="mt-2 text-sm text-foreground/85">
                 From a weekly segregated pickup to full house deep cleaning and yard debris removal.
               </p>
             </div>
@@ -220,7 +220,7 @@ export default function Home() {
               href="/services"
               className="hidden items-center gap-1.5 text-sm font-bold text-brand hover:text-brand-dark sm:inline-flex"
             >
-              View all services <ArrowRight className="h-4 w-4" />
+              View all services <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
 
@@ -235,7 +235,7 @@ export default function Home() {
               href="/services"
               className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-white px-6 py-3 text-sm font-semibold text-brand"
             >
-              View all {services.length} services <ArrowRight className="h-4 w-4" />
+              View all {services.length} services <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function Home() {
         <div className="text-center">
           <div className="text-xs font-bold uppercase tracking-wider text-brand">Simple Workflow</div>
           <h2 className="mt-1 text-2xl font-black text-foreground sm:text-4xl">How Bin Friend Works</h2>
-          <p className="mx-auto mt-2 max-w-lg text-sm text-foreground/60">
+          <p className="mx-auto mt-2 max-w-lg text-sm text-foreground/85">
             Booking a pickup takes under 60 seconds with no complex apps or long sign-ups.
           </p>
         </div>
@@ -276,14 +276,14 @@ export default function Home() {
               key={item.title}
               className="relative rounded-2xl border border-black/5 bg-white p-6 text-center shadow-sm sm:p-8"
             >
-              <div className="absolute right-4 top-4 text-xs font-black text-brand/20 sm:text-sm">
+              <div className="absolute right-4 top-4 text-xs font-black text-brand/30 sm:text-sm">
                 STEP {item.step}
               </div>
               <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light text-brand">
-                <item.icon className="h-6 w-6" />
+                <item.icon className="h-6 w-6" aria-hidden="true" />
               </span>
               <h3 className="mt-5 font-bold text-foreground sm:text-lg">{item.title}</h3>
-              <p className="mt-2 text-sm text-foreground/65 leading-relaxed">{item.desc}</p>
+              <p className="mt-2 text-sm text-foreground/85 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

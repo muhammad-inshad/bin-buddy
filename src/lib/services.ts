@@ -15,7 +15,7 @@ export const services: Service[] = [
     description: "Scheduled doorstep collection — daily, weekly or on demand.",
     priceLabel: "from ₹199/visit",
     icon: "truck",
-    image: "/images/service-home-waste-pickup.jpg",
+    image: "/images/service-home-waste-pickup.webp",
     details: [
       "Flexible daily, weekly or on-call pickup slots",
       "Segregated wet & dry waste collection",
@@ -28,7 +28,7 @@ export const services: Service[] = [
     description: "Plastic, paper, metal and e-waste collected and recycled responsibly.",
     priceLabel: "from ₹149/visit",
     icon: "recycle",
-    image: "/images/service-recycling-collection.jpg",
+    image: "/images/service-recycling-collection.webp",
     details: [
       "Separate collection for plastic, paper, metal & e-waste",
       "Certified recycling partners",
@@ -41,7 +41,7 @@ export const services: Service[] = [
     description: "Full home cleaning — kitchen, bathrooms, floors and more.",
     priceLabel: "from ₹2,499",
     icon: "home",
-    image: "/images/service-house-deep-cleaning.jpg",
+    image: "/images/service-house-deep-cleaning.webp",
     details: [
       "Kitchen, bathroom, floor & window cleaning",
       "Eco-friendly cleaning products",
@@ -54,7 +54,7 @@ export const services: Service[] = [
     description: "Remove debris, overgrowth and garden waste from your property.",
     priceLabel: "from ₹3,999",
     icon: "trees",
-    image: "/images/service-yard-plot-clearing.jpg",
+    image: "/images/service-yard-plot-clearing.webp",
     details: [
       "Overgrowth, debris & garden waste removal",
       "Suitable for plots, farmhouses & vacant land",

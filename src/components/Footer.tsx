@@ -29,7 +29,7 @@ export default function Footer() {
                 Bin<span className="text-brand">Friend</span>
               </span>
             </Link>
-            <p className="mt-3.5 max-w-xs text-sm text-foreground/65 leading-relaxed">
+            <p className="mt-3.5 max-w-xs text-sm text-foreground/85 leading-relaxed">
               Durable dustbins and doorstep waste pickup, recycling, and cleaning services for cleaner homes and communities.
             </p>
             <div className="mt-5 flex items-center gap-3">
@@ -37,8 +37,8 @@ export default function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/75 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
+                aria-label="Bin Friend on Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/80 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
               >
                 <InstagramIcon className="h-4 w-4" />
               </a>
@@ -46,8 +46,8 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/75 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
+                aria-label="Bin Friend on Facebook"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/80 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
               >
                 <FacebookIcon className="h-4 w-4" />
               </a>
@@ -55,8 +55,8 @@ export default function Footer() {
                 href={siteConfig.social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/75 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
+                aria-label="Bin Friend on Twitter"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-black/10 text-foreground/80 transition-colors hover:border-brand hover:bg-brand-light/50 hover:text-brand"
               >
                 <TwitterIcon className="h-4 w-4" />
               </a>
@@ -66,7 +66,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-foreground">Explore</h3>
-            <ul className="mt-4 space-y-2.5 text-sm font-medium text-foreground/70">
+            <ul className="mt-4 space-y-2.5 text-sm font-medium text-foreground/85">
               <li>
                 <Link href="/shop" className="transition-colors hover:text-brand">
                   Shop Bins
@@ -103,7 +103,7 @@ export default function Footer() {
           {/* Customer Support */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-foreground">Booking &amp; Support</h3>
-            <ul className="mt-4 space-y-2.5 text-sm font-medium text-foreground/70">
+            <ul className="mt-4 space-y-2.5 text-sm font-medium text-foreground/85">
               <li>
                 <Link href="/book" className="transition-colors hover:text-brand">
                   Book Doorstep Pickup
@@ -130,7 +130,7 @@ export default function Footer() {
           {/* Contact Details */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-foreground">Get In Touch</h3>
-            <ul className="mt-4 space-y-3 text-sm text-foreground/70">
+            <ul className="mt-4 space-y-3 text-sm text-foreground/85">
               <li className="flex items-start gap-2.5">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
                 <span className="font-medium">{siteConfig.phoneDisplay}</span>
@@ -148,7 +148,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-foreground/75 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-foreground/85 sm:flex-row">
           <div>© {YEAR} Bin Friend Private Limited. All rights reserved.</div>
           <div className="flex gap-6">
             <span>Eco-Friendly Waste Solutions</span>

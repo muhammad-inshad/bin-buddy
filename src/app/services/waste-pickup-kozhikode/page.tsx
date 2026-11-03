@@ -274,7 +274,7 @@ export default function WastePickupKozhikodePage() {
               <div className="relative overflow-hidden rounded-3xl border border-black/8 bg-white p-3 shadow-xl">
                 <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-slate-100">
                   <Image
-                    src="/images/service-doorstep-pickup.jpg"
+                    src="/images/service-doorstep-pickup.webp"
                     alt="Doorstep waste pickup collection service in Kozhikode"
                     fill
                     priority

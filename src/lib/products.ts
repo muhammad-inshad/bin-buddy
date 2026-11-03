@@ -23,7 +23,7 @@ export const products: Product[] = [
     features: ["5 litre capacity", "Swing lid", "Fits under desks", "Durable plastic"],
     color: "#16a34a",
     variant: "swing",
-    image: "/images/small-dustbin.jpg",
+    image: "/images/small-dustbin.webp",
   },
   {
     slug: "medium-dustbin",
@@ -35,7 +35,7 @@ export const products: Product[] = [
     features: ["15 litre capacity", "Flip-top lid", "Washable liner", "Odour resistant"],
     color: "#059669",
     variant: "basic",
-    image: "/images/medium-dustbin.jpg",
+    image: "/images/medium-dustbin.webp",
   },
   {
     slug: "large-dustbin",
@@ -47,7 +47,7 @@ export const products: Product[] = [
     features: ["30 litre capacity", "Reinforced base", "Side handles", "Heavy-duty build"],
     color: "#15803d",
     variant: "large",
-    image: "/images/large-dustbin.jpg",
+    image: "/images/large-dustbin.webp",
   },
   {
     slug: "pedal-dustbin",
@@ -59,7 +59,7 @@ export const products: Product[] = [
     features: ["10 litre capacity", "Foot pedal lid", "Soft-close hinge", "Rust-proof pedal arm"],
     color: "#0d9488",
     variant: "pedal",
-    image: "/images/pedal-dustbin.jpg",
+    image: "/images/pedal-dustbin.webp",
   },
   {
     slug: "kitchen-compost-bin",
@@ -71,7 +71,7 @@ export const products: Product[] = [
     features: ["8 litre capacity", "Charcoal filter lid", "Leak-proof seal", "Compost-ready"],
     color: "#65a30d",
     variant: "compost",
-    image: "/images/kitchen-compost-bin.jpg",
+    image: "/images/kitchen-compost-bin.webp",
   },
   {
     slug: "outdoor-wheelie-bin",
@@ -83,7 +83,7 @@ export const products: Product[] = [
     features: ["120 litre capacity", "2 wheels for easy transport", "Lockable lid", "UV-resistant body"],
     color: "#166534",
     variant: "wheelie",
-    image: "/images/outdoor-wheelie-bin.jpg",
+    image: "/images/outdoor-wheelie-bin.webp",
   },
 ];
 
