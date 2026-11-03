@@ -15,6 +15,24 @@ export const metadata: Metadata = {
     "garbage pickup calicut",
     "doorstep waste collection kerala",
   ],
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Waste Pickup & Cleaning Services in Kozhikode | Bin Friend",
+    description:
+      "Doorstep waste pickup, garbage collection, and deep cleaning services across Kozhikode (Calicut), Kerala.",
+    url: "https://warm-liger-7e5ba3.netlify.app/services",
+    siteName: "Bin Friend",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Waste Pickup & Cleaning Services in Kozhikode | Bin Friend",
+    description:
+      "Complete waste management and cleaning services in Kozhikode (Calicut).",
+  },
 };
 
 export default function ServicesPage() {

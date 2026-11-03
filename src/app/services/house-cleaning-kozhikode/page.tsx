@@ -6,18 +6,19 @@ import {
   CheckCircle2,
   MapPin,
   Clock,
-  Star,
+  ShieldCheck,
   MessageCircle,
   HelpCircle,
+  Check,
 } from "lucide-react";
-import { buildWhatsAppLink, siteConfig } from "@/lib/config";
+import { buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Best House Cleaning Services in Kozhikode | Bin Friend",
   description:
-    "Top-rated professional house cleaning in Kozhikode (Calicut). Deep home cleaning, kitchen & bathroom sanitization, villa cleaning from ₹2,499. Book instantly on WhatsApp!",
+    "Top-rated professional house cleaning services in Kozhikode (Calicut). Deep home cleaning, kitchen scrubbing, bathroom sanitization, and villa cleaning from ₹1,899. Book on WhatsApp: +91 70250 34758.",
   keywords: [
-    "house cleaning kozhikode",
+    "house cleaning services in kozhikode",
     "best house cleaner in kozhikode",
     "deep cleaning services calicut",
     "home cleaning services kozhikode",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best House Cleaning Services in Kozhikode | Bin Friend",
     description:
-      "Professional deep house cleaning, kitchen scrubbing & bathroom descaling across Kozhikode. Trained staff, eco-friendly agents, transparent rates.",
+      "Professional deep house cleaning, kitchen scrubbing & bathroom descaling across Kozhikode (Calicut). Trained staff, eco-friendly agents, transparent rates.",
     url: "https://warm-liger-7e5ba3.netlify.app/services/house-cleaning-kozhikode",
     siteName: "Bin Friend",
     locale: "en_IN",
@@ -42,9 +43,16 @@ export const metadata: Metadata = {
         url: "/images/service-house-deep-cleaning.jpg",
         width: 1200,
         height: 630,
-        alt: "House Deep Cleaning in Kozhikode",
+        alt: "Professional House Deep Cleaning Services in Kozhikode",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best House Cleaning Services in Kozhikode | Bin Friend",
+    description:
+      "Professional deep home cleaning, kitchen & bathroom sanitization in Kozhikode. Trained crew & eco-friendly detergents.",
+    images: ["/images/service-house-deep-cleaning.jpg"],
   },
 };
 
@@ -109,24 +117,18 @@ const packages = [
   },
 ];
 
-const reviews = [
+const serviceGuarantees = [
   {
-    name: "Dr. Anoop Nambiar",
-    area: "Mavoor Road, Kozhikode",
-    rating: 5,
-    text: "Booked Bin Friend for our 3BHK flat near Mavoor Road before shifting. The 3-member team arrived strictly on time with heavy machines. Bathrooms and kitchen look brand new!",
+    title: "Background-Verified Crew",
+    desc: "Every cleaner on our team is verified, polite, and trained with commercial single-disc floor scrubbers and vacuum systems.",
   },
   {
-    name: "Fathima Suhara",
-    area: "Nadakkavu, Calicut",
-    rating: 5,
-    text: "Easily the best house cleaning service in Kozhikode. No advance needed, booked through WhatsApp within 2 minutes. The kitchen tiles and exhaust grease were completely removed.",
+    title: "Eco-Friendly Sanitizers",
+    desc: "We use non-toxic, surface-safe detergents for kitchens and bathrooms that are safe for children and domestic pets.",
   },
   {
-    name: "Rahul K.",
-    area: "Chevayur, Kozhikode",
-    rating: 5,
-    text: "Very polite, background-verified staff. They brought their own eco-friendly chemicals and vacuum cleaners. Great value for villa deep cleaning in Calicut.",
+    title: "Pay After Inspection",
+    desc: "Zero advance payment required. You inspect your flat or villa after our crew finishes and pay only when 100% satisfied.",
   },
 ];
 
@@ -154,37 +156,57 @@ export default function HouseCleaningKozhikodePage() {
     "Hi Bin Friend! I'm looking for house cleaning services in Kozhikode. Please share availability and details."
   );
 
-  // Schema.org structured data for Google local search
+  // Schema.org structured data: Service + FAQPage (Resolves parent_node & aggregateRating errors)
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "CleaningService",
-    name: "Bin Friend House Cleaning Services Kozhikode",
-    image: "https://warm-liger-7e5ba3.netlify.app/images/service-house-deep-cleaning.jpg",
-    telephone: siteConfig.phoneDisplay,
-    priceRange: "₹1899 - ₹4999",
-    url: "https://warm-liger-7e5ba3.netlify.app/services/house-cleaning-kozhikode",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.address,
-      addressLocality: "Kozhikode",
-      addressRegion: "Kerala",
-      postalCode: "673004",
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 11.2588,
-      longitude: 75.7804,
-    },
-    areaServed: kozhikodeAreas.map((area) => ({
-      "@type": "AdministrativeArea",
-      name: `${area}, Kozhikode`,
-    })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "148",
-    },
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://warm-liger-7e5ba3.netlify.app/services/house-cleaning-kozhikode/#service",
+        name: "House Cleaning Services in Kozhikode",
+        serviceType: "House Cleaning and Deep Cleaning",
+        description:
+          "Professional house cleaning, deep home cleaning, kitchen scrubbing, bathroom sanitization, and villa cleaning across Kozhikode (Calicut), Kerala.",
+        provider: {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://warm-liger-7e5ba3.netlify.app/#organization",
+          name: "Bin Friend",
+          telephone: "+91-7025034758",
+          url: "https://warm-liger-7e5ba3.netlify.app/",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Mankavu",
+            addressLocality: "Kozhikode",
+            addressRegion: "Kerala",
+            postalCode: "673007",
+            addressCountry: "IN",
+          },
+        },
+        areaServed: kozhikodeAreas.map((area) => ({
+          "@type": "AdministrativeArea",
+          name: `${area}, Kozhikode`,
+        })),
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "INR",
+          lowPrice: "1899",
+          highPrice: "4299",
+          offerCount: "3",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://warm-liger-7e5ba3.netlify.app/services/house-cleaning-kozhikode/#faq",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.a,
+          },
+        })),
+      },
+    ],
   };
 
   return (
@@ -268,17 +290,13 @@ export default function HouseCleaningKozhikodePage() {
                   </div>
                 </div>
 
-                {/* Rating badge */}
-                <div className="mt-3 flex items-center justify-between px-2 py-1">
-                  <div className="flex items-center gap-1 text-amber-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                    ))}
-                    <span className="ml-1 text-xs font-bold text-foreground">4.9 / 5.0</span>
+                {/* Quality Guarantee badge */}
+                <div className="mt-3 flex items-center justify-between px-2 py-1 text-xs font-semibold text-foreground/80">
+                  <div className="flex items-center gap-1.5 text-brand">
+                    <ShieldCheck className="h-4 w-4 text-brand" />
+                    <span>Pay After Inspection</span>
                   </div>
-                  <span className="text-xs font-medium text-foreground/60">
-                    140+ Happy Kozhikode Homes
-                  </span>
+                  <span className="text-foreground/60">Mankavu, Kozhikode Hub</span>
                 </div>
               </div>
             </div>
@@ -381,36 +399,37 @@ export default function HouseCleaningKozhikodePage() {
         </div>
       </section>
 
-      {/* Customer Reviews from Kozhikode */}
+      {/* Service Guarantees & Standards */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
         <div className="text-center">
           <span className="inline-block rounded-full bg-brand-light px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-dark">
-            Client Feedback
+            Our Quality Standards
           </span>
           <h2 className="mt-2 text-2xl font-black text-foreground sm:text-4xl">
-            What Kozhikode Residents Say
+            Why Kozhikode Residents Trust Bin Friend
           </h2>
+          <p className="mx-auto mt-2 max-w-xl text-sm sm:text-base text-foreground/60">
+            Professional hygiene standards, background-checked cleaners, and 100% satisfaction guarantee for Calicut homes.
+          </p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {reviews.map((r) => (
+          {serviceGuarantees.map((item) => (
             <div
-              key={r.name}
-              className="flex flex-col justify-between rounded-3xl border border-black/8 bg-white p-6 shadow-sm"
+              key={item.title}
+              className="flex flex-col justify-between rounded-3xl border border-black/8 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               <div>
-                <div className="flex gap-1 text-amber-400">
-                  {[...Array(r.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-amber-400" />
-                  ))}
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light text-brand mb-4">
+                  <Check className="h-6 w-6" />
                 </div>
-                <p className="mt-3 text-sm text-foreground/70 leading-relaxed italic">
-                  &ldquo;{r.text}&rdquo;
+                <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                <p className="mt-2.5 text-sm text-foreground/70 leading-relaxed">
+                  {item.desc}
                 </p>
               </div>
-              <div className="mt-5 border-t border-black/5 pt-4">
-                <div className="text-sm font-bold text-foreground">{r.name}</div>
-                <div className="text-xs text-brand font-medium">{r.area}</div>
+              <div className="mt-6 border-t border-black/5 pt-3 text-xs font-semibold text-brand">
+                Standard on every booking
               </div>
             </div>
           ))}

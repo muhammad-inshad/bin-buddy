@@ -4,17 +4,60 @@ import { products } from "@/lib/products";
 import { ShieldCheck, Truck, RefreshCw, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shop Bins — Bin Friend",
-  description: "Browse Bin Friend's range of dustbins — from compact bedroom bins to outdoor wheelie bins.",
+  title: "Shop Premium Dustbins & Recycling Bins in Kozhikode | Bin Friend",
+  description:
+    "Buy durable, odour-resistant dustbins, pedal bins, swing bins, and heavy-duty outdoor wheelie bins in Kozhikode (Calicut) with fast doorstep delivery.",
+  alternates: {
+    canonical: "/shop",
+  },
+  openGraph: {
+    title: "Shop Premium Dustbins & Recycling Bins | Bin Friend",
+    description:
+      "Durable household and commercial waste bins in Kozhikode. Fast delivery across Kerala.",
+    url: "https://warm-liger-7e5ba3.netlify.app/shop",
+    siteName: "Bin Friend",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Shop Premium Dustbins in Kozhikode | Bin Friend",
+    description:
+      "Buy durable dustbins and recycling bins with fast doorstep delivery across Kozhikode.",
+  },
+};
+
+const shopJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: products.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: product.name,
+    description: product.description,
+    image: `https://warm-liger-7e5ba3.netlify.app${product.image}`,
+    offers: {
+      "@type": "Offer",
+      price: product.price.toString(),
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
+    },
+  })),
 };
 
 export default function ShopPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-16">
+      {/* Product Catalog Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(shopJsonLd) }}
+      />
+
       {/* Header */}
       <div className="text-center">
         <span className="inline-block rounded-full bg-brand-light px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-dark">
-          Product Catalog
+          Product Catalog · Kozhikode Delivery
         </span>
         <h1 className="mt-3 text-3xl font-black text-foreground sm:text-5xl">
           Shop Quality Dustbins

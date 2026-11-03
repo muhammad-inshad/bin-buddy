@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/config";
 import { services } from "@/lib/services";
+import { trackEvent } from "@/lib/gtm";
 
 export default function BookPickupForm() {
   const [name, setName] = useState("");
@@ -33,6 +34,12 @@ export default function BookPickupForm() {
     ];
     if (date) lines.push(`*Preferred date:* ${date}`);
     if (notes.trim()) lines.push(`*Notes:* ${notes.trim()}`);
+
+    trackEvent("generate_lead", {
+      event_category: "Booking",
+      service_name: service,
+      booking_date: date || "asap",
+    });
 
     window.open(buildWhatsAppLink(lines.join("\n")), "_blank", "noopener,noreferrer");
   }

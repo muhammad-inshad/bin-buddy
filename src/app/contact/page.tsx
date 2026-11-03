@@ -1,11 +1,43 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, ExternalLink } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import { siteConfig, buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Bin Friend",
-  description: "Get in touch with Bin Friend for bins, pickups or custom waste management plans.",
+  title: "Contact Bin Friend — Waste Pickup & Cleaning in Kozhikode",
+  description:
+    "Contact Bin Friend in Mankavu, Kozhikode (Calicut). Phone: +91 70250 34758, WhatsApp, email, or online inquiry for doorstep waste collection and deep cleaning services.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Bin Friend — Kozhikode Waste Management Hub",
+    description:
+      "Reach out to Bin Friend for doorstep waste pickups, scrap haulage, and house cleaning in Kozhikode. Mankavu hub support desk.",
+    url: "https://warm-liger-7e5ba3.netlify.app/contact",
+    siteName: "Bin Friend",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact Bin Friend — Waste Pickup & Cleaning in Kozhikode",
+    description:
+      "Contact Bin Friend in Mankavu, Kozhikode. Phone: +91 70250 34758 or message directly on WhatsApp.",
+  },
+};
+
+const contactPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://warm-liger-7e5ba3.netlify.app/contact#webpage",
+  name: "Contact Bin Friend",
+  url: "https://warm-liger-7e5ba3.netlify.app/contact",
+  description:
+    "Official contact and support desk for Bin Friend waste pickup and house cleaning services in Kozhikode.",
+  mainEntity: {
+    "@id": "https://warm-liger-7e5ba3.netlify.app/#organization",
+  },
 };
 
 export default function ContactPage() {
@@ -14,36 +46,46 @@ export default function ContactPage() {
   const info = [
     {
       icon: Phone,
-      label: "Phone",
+      label: "Phone Support",
       value: siteConfig.phoneDisplay,
       href: `tel:+${siteConfig.whatsappNumber}`,
+      isExternal: false,
     },
     {
       icon: Mail,
       label: "Email",
       value: siteConfig.email,
       href: `mailto:${siteConfig.email}`,
+      isExternal: false,
     },
     {
       icon: MapPin,
-      label: "Service Hub",
-      value: siteConfig.address,
-      href: undefined,
+      label: "Service Hub (Mankavu, Calicut)",
+      value: `${siteConfig.address} (Open in Maps)`,
+      href: "https://www.google.com/maps/search/?api=1&query=Mankavu,+Kozhikode,+Kerala+673007",
+      isExternal: true,
     },
     {
       icon: Clock,
       label: "Operational Hours",
       value: siteConfig.hours,
       href: undefined,
+      isExternal: false,
     },
   ];
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-16">
+      {/* Contact Page Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }}
+      />
+
       {/* Header */}
       <div className="text-center">
         <span className="inline-block rounded-full bg-brand-light px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-dark">
-          Get in Touch
+          Get in Touch · Kozhikode Support Desk
         </span>
         <h1 className="mt-3 text-3xl font-black text-foreground sm:text-5xl">
           We&apos;re Here to Help
@@ -72,9 +114,12 @@ export default function ContactPage() {
                 {item.href ? (
                   <a
                     href={item.href}
-                    className="mt-1 block text-sm sm:text-base font-bold text-foreground hover:text-brand transition-colors truncate"
+                    target={item.isExternal ? "_blank" : undefined}
+                    rel={item.isExternal ? "noopener noreferrer" : undefined}
+                    className="mt-1 inline-flex items-center gap-1.5 text-sm sm:text-base font-bold text-foreground hover:text-brand transition-colors"
                   >
-                    {item.value}
+                    <span>{item.value}</span>
+                    {item.isExternal && <ExternalLink className="h-3.5 w-3.5 text-brand" />}
                   </a>
                 ) : (
                   <div className="mt-1 text-sm sm:text-base font-medium text-foreground">
@@ -91,7 +136,7 @@ export default function ContactPage() {
               <MessageCircle className="h-4 w-4 text-brand" /> Fast Response via WhatsApp
             </div>
             <p className="mt-2 text-xs sm:text-sm text-foreground/70 leading-relaxed">
-              Prefer chatting directly? Tap below to open a conversation with our operations desk.
+              Prefer chatting directly? Tap below to open a conversation with our Mankavu operations desk.
             </p>
             <a
               href={whatsappUrl}
@@ -104,9 +149,16 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Right Column: Contact Form */}
-        <div className="lg:col-span-3">
-          <ContactForm />
+        {/* Right Column: Interactive Form */}
+        <div className="lg:col-span-3 rounded-3xl border border-black/8 bg-white p-6 sm:p-8 shadow-sm">
+          <h2 className="text-xl font-bold text-foreground sm:text-2xl">Send a Message</h2>
+          <p className="mt-1 text-xs sm:text-sm text-foreground/60">
+            Fill in your details and we&apos;ll get back to you within 2 business hours.
+          </p>
+
+          <div className="mt-6">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </div>

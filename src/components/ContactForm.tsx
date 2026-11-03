@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/config";
+import { trackEvent } from "@/lib/gtm";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -25,6 +26,11 @@ export default function ContactForm() {
       `*Phone:* ${phone}`,
       `*Message:* ${message}`,
     ].join("\n");
+
+    trackEvent("contact_inquiry", {
+      event_category: "Contact",
+      method: "whatsapp",
+    });
 
     window.open(buildWhatsAppLink(text), "_blank", "noopener,noreferrer");
   }

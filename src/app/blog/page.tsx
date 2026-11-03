@@ -14,6 +14,24 @@ export const metadata: Metadata = {
     "composting kerala",
     "bin friend eco guides",
   ],
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Kozhikode Waste Management Blog & Eco Guides — Bin Friend",
+    description:
+      "Expert waste segregation and home cleaning guides for Kozhikode (Calicut) residents.",
+    url: "https://warm-liger-7e5ba3.netlify.app/blog",
+    siteName: "Bin Friend",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kozhikode Waste Management Blog & Eco Guides — Bin Friend",
+    description:
+      "Expert tips on waste segregation and deep cleaning in Kozhikode (Calicut).",
+  },
 };
 
 export default function BlogPage() {

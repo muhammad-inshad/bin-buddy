@@ -27,9 +27,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://warm-liger-7e5ba3.netlify.app"),
-  title: "Bin Friend — Waste Pickup & Cleaning Services in Kozhikode",
+  title: {
+    default: "Bin Friend — Waste Pickup & House Cleaning Services in Kozhikode",
+    template: "%s | Bin Friend Kozhikode",
+  },
   description:
-    "Top-rated doorstep waste pickup, scrap recycling, quality dustbins and professional house cleaning services in Kozhikode (Calicut), Kerala. Book on WhatsApp: +91 70250 34758.",
+    "Professional doorstep waste pickup, scrap recycling, dustbin solutions, and deep house cleaning services across Kozhikode (Calicut), Kerala. Based in Mankavu. Instant WhatsApp booking.",
   keywords: [
     "waste pickup service in kozhikode",
     "waste pickup kozhikode",
@@ -37,21 +40,53 @@ export const metadata: Metadata = {
     "garbage pickup service kozhikode",
     "scrap pickup kozhikode",
     "house cleaning services in kozhikode",
+    "deep cleaning services calicut",
     "waste management kozhikode",
     "dustbins kozhikode",
     "bin friend kozhikode",
   ],
-  alternates: {
-    canonical: "/",
+  authors: [{ name: "Bin Friend Team", url: "https://warm-liger-7e5ba3.netlify.app" }],
+  creator: "Bin Friend",
+  publisher: "Bin Friend",
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
-    title: "Bin Friend — Waste Pickup & Cleaning Services in Kozhikode",
+    title: "Bin Friend — Waste Pickup & House Cleaning Services in Kozhikode",
     description:
-      "Reliable doorstep waste collection, recycling, and deep house cleaning across Kozhikode (Calicut). Based in Mankavu. Same-day booking via WhatsApp.",
+      "Reliable doorstep waste collection, scrap recycling, and professional deep house cleaning across Kozhikode (Calicut). Based in Mankavu, Kerala.",
     url: "https://warm-liger-7e5ba3.netlify.app/",
     siteName: "Bin Friend",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/images/service-doorstep-pickup.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bin Friend Waste Pickup and Cleaning in Kozhikode",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bin Friend — Waste Pickup & House Cleaning Services in Kozhikode",
+    description:
+      "Reliable doorstep waste collection, scrap recycling, and deep house cleaning in Kozhikode (Calicut).",
+    images: ["/images/service-doorstep-pickup.jpg"],
   },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
@@ -66,11 +101,13 @@ export const metadata: Metadata = {
 const businessJsonLd = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
+  "@id": "https://warm-liger-7e5ba3.netlify.app/#organization",
   name: "Bin Friend",
+  alternateName: ["Bin Friend Kozhikode", "Bin Friend Waste Management"],
   image: "https://warm-liger-7e5ba3.netlify.app/icon.svg",
   url: "https://warm-liger-7e5ba3.netlify.app/",
-  telephone: "7025034758",
-  priceRange: "2000",
+  telephone: "+91-7025034758",
+  priceRange: "₹₹",
   openingHours: "Mo-Su 09:00-21:00",
   address: {
     "@type": "PostalAddress",
@@ -85,6 +122,21 @@ const businessJsonLd = {
     latitude: 11.2404392,
     longitude: 75.8156257,
   },
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Kozhikode",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Kerala",
+    },
+  ],
+  sameAs: [
+    "https://instagram.com/binfriend",
+    "https://facebook.com/binfriend",
+    "https://twitter.com/binfriend",
+  ],
 };
 
 export default function RootLayout({

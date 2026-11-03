@@ -15,6 +15,24 @@ export const metadata: Metadata = {
     "mankavu waste collection",
     "recycling service kozhikode",
   ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Bin Friend — Kozhikode's Waste Management & Pickup Service",
+    description:
+      "Learn about Bin Friend's mission based in Mankavu, Kozhikode (Calicut) to make doorstep waste pickup and eco-friendly cleaning simple and reliable across Kerala.",
+    url: "https://warm-liger-7e5ba3.netlify.app/about",
+    siteName: "Bin Friend",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Bin Friend — Kozhikode's Waste Management & Pickup Service",
+    description:
+      "Learn about Bin Friend's mission based in Mankavu, Kozhikode (Calicut) to make doorstep waste pickup and eco-friendly cleaning simple and reliable across Kerala.",
+  },
 };
 
 const values = [
@@ -87,12 +105,12 @@ export default function AboutPage() {
             {/* Quick Metrics */}
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-black/10 pt-6">
               <div>
-                <div className="text-3xl font-black text-brand">4,500+</div>
-                <div className="text-xs font-medium text-foreground/60 sm:text-sm">Households Supported</div>
+                <div className="text-2xl font-black text-brand">Mankavu Hub</div>
+                <div className="text-xs font-medium text-foreground/60 sm:text-sm">Kozhikode Center (673007)</div>
               </div>
               <div>
-                <div className="text-3xl font-black text-brand">120+ Tons</div>
-                <div className="text-xs font-medium text-foreground/60 sm:text-sm">Recycled Responsibly</div>
+                <div className="text-2xl font-black text-brand">100% Green</div>
+                <div className="text-xs font-medium text-foreground/60 sm:text-sm">Authorized Kerala Recycling</div>
               </div>
             </div>
           </div>
@@ -145,9 +163,9 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="bg-brand py-14 sm:py-16 text-white">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-4 text-center sm:px-6">
-          <h2 className="text-2xl font-black sm:text-4xl">Join Thousands of Happy Homes</h2>
+          <h2 className="text-2xl font-black sm:text-4xl">Clean Homes Across Kozhikode</h2>
           <p className="max-w-md text-sm sm:text-base text-white/90">
-            Take the first step toward a cleaner home and a cleaner planet today.
+            Take the first step toward a cleaner home and a cleaner planet today with Bin Friend.
           </p>
           <div className="mt-3 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <a

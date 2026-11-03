@@ -18,7 +18,37 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post not found — Bin Friend" };
-  return { title: `${post.title} — Bin Friend`, description: post.excerpt };
+
+  const postUrl = `https://warm-liger-7e5ba3.netlify.app/blog/${slug}`;
+  const imageUrl = `https://warm-liger-7e5ba3.netlify.app${post.image}`;
+
+  return {
+    title: `${post.title} — Bin Friend Kozhikode`,
+    description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${post.title} — Bin Friend`,
+      description: post.excerpt,
+      url: postUrl,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [
+        {
+          url: imageUrl,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function BlogPostPage({
@@ -34,8 +64,35 @@ export default async function BlogPostPage({
     `Hi Bin Friend! I read your article "${post.title}" and would like to learn about your pickup services.`
   );
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://warm-liger-7e5ba3.netlify.app${post.image}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@id": "https://warm-liger-7e5ba3.netlify.app/#organization",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://warm-liger-7e5ba3.netlify.app/blog/${slug}`,
+    },
+  };
+
   return (
     <article className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-14">
+      {/* Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+
       {/* Back button */}
       <Link
         href="/blog"

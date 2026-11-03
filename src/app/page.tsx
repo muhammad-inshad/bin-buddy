@@ -29,7 +29,7 @@ export default function Home() {
               </div>
 
               <h1 className="mt-5 text-3xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl sm:leading-[1.12]">
-                Bins that fit our home. <br />
+                Bins that fit your home. <br />
                 <span className="text-brand bg-gradient-to-r from-brand to-emerald-600 bg-clip-text text-transparent">
                   Pickups that fit your life.
                 </span>
@@ -130,8 +130,8 @@ export default function Home() {
                     <Sparkles className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-black text-foreground">4,500+ Homes</div>
-                    <div className="text-[11px] text-foreground/60">Trusted Clean Neighborhoods</div>
+                    <div className="text-xs font-black text-foreground">Local Mankavu Team</div>
+                    <div className="text-[11px] text-foreground/60">Serving Kozhikode Homes Daily</div>
                   </div>
                 </div>
               </div>
@@ -140,14 +140,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Strip */}
+      {/* Trust & Local Service Strip */}
       <section className="border-y border-black/5 bg-white">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-4 py-8 sm:grid-cols-4 sm:gap-6 sm:px-6 sm:py-10">
           {[
-            { label: "Happy customers", value: "4,500+" },
-            { label: "Pickups completed", value: "32,000+" },
-            { label: "Cities covered", value: "8" },
-            { label: "Waste recycled", value: "120+ tons" },
+            { label: "Central Operations Hub", value: "Mankavu" },
+            { label: "Booking via WhatsApp", value: "< 5 Mins" },
+            { label: "Core Service Zone", value: "Kozhikode" },
+            { label: "Material Recycling", value: "100% Green" },
           ].map((s) => (
             <div key={s.label} className="text-center p-2">
               <div className="text-2xl font-black text-brand sm:text-3xl lg:text-4xl">{s.value}</div>

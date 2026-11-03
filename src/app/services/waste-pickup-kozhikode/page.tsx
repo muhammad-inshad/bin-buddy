@@ -5,11 +5,13 @@ import {
   Truck,
   CheckCircle2,
   MapPin,
-  Star,
   MessageCircle,
   HelpCircle,
+  ShieldCheck,
+  Clock,
+  Recycle,
 } from "lucide-react";
-import { buildWhatsAppLink, siteConfig } from "@/lib/config";
+import { buildWhatsAppLink } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Best Doorstep Waste Pickup Service in Kozhikode | Bin Friend",
@@ -45,6 +47,13 @@ export const metadata: Metadata = {
         alt: "Doorstep Waste Pickup Service in Kozhikode",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Doorstep Waste Pickup Service in Kozhikode | Bin Friend",
+    description:
+      "Reliable doorstep waste pickup and recycling service in Kozhikode (Calicut). Zero landfill mission, verified collectors, transparent pricing.",
+    images: ["/images/service-doorstep-pickup.jpg"],
   },
 };
 
@@ -114,24 +123,24 @@ const packages = [
   },
 ];
 
-const reviews = [
+const serviceStandards = [
   {
-    name: "Sujith Menon",
-    area: "Mankavu, Kozhikode",
-    rating: 5,
-    text: "Living near Mankavu, disposing of segregated waste was always a headache until I started using Bin Friend. The pickup boys arrive strictly on schedule every alternate morning. Clean, polite, and very reasonable rates.",
+    icon: Clock,
+    title: "Fixed Morning & Evening Slots",
+    description:
+      "No waiting around. Pickups run on strict schedules so waste does not accumulate outside your doorstep in Kozhikode heat.",
   },
   {
-    name: "Dr. Reena Thomas",
-    area: "Medical College Area, Calicut",
-    rating: 5,
-    text: "Easily the most reliable waste pickup service in Kozhikode! Booking was done over WhatsApp within minutes. They provide transparent reports that our recyclables actually reach certified centers.",
+    icon: Recycle,
+    title: "100% Segregation & Green Recycling",
+    description:
+      "Dry waste, paper, and plastics are routed directly to authorized recycling hubs in Kerala, maintaining our zero-landfill commitment.",
   },
   {
-    name: "Mohammed Niyas",
-    area: "Nadakkavu, Kozhikode",
-    rating: 5,
-    text: "Booked their bulk scrap pickup before renovating our family house in Nadakkavu. They cleared 15 cartons, metal scrap and old appliances in under an hour. Highly recommended!",
+    icon: ShieldCheck,
+    title: "Verified & Background-Checked Crew",
+    description:
+      "Courteous, uniformed staff equipped with protective gear ensure clean, safe, and hygienic handling at every pickup.",
   },
 ];
 
@@ -159,38 +168,48 @@ export default function WastePickupKozhikodePage() {
     "Hi Bin Friend! I'm looking for doorstep waste pickup services in Kozhikode. Please share plan details and availability."
   );
 
-  // LocalBusiness / WasteManagementService Schema.org structured data
-  const jsonLd = {
+  // Valid Schema.org structured data avoiding self-serving aggregateRating
+  const pageSchema = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    name: "Bin Friend Doorstep Waste Pickup Service Kozhikode",
-    image: "https://warm-liger-7e5ba3.netlify.app/images/service-doorstep-pickup.jpg",
-    telephone: siteConfig.phoneDisplay,
-    priceRange: "₹399 - ₹2499",
-    url: "https://warm-liger-7e5ba3.netlify.app/services/waste-pickup-kozhikode",
-    openingHours: "Mo-Su 09:00-21:00",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.address,
-      addressLocality: "Kozhikode",
-      addressRegion: "Kerala",
-      postalCode: "673007",
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 11.2404392,
-      longitude: 75.8156257,
-    },
-    areaServed: kozhikodeAreas.map((area) => ({
-      "@type": "AdministrativeArea",
-      name: `${area}, Kozhikode`,
-    })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "185",
-    },
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://warm-liger-7e5ba3.netlify.app/services/waste-pickup-kozhikode#service",
+        name: "Doorstep Waste Pickup & Scrap Recycling in Kozhikode",
+        serviceType: "Waste Collection, Scrap Haulage & Recycling",
+        description:
+          "Regular doorstep household waste pickup, dry recyclable collection, scrap haulage, and e-waste disposal across Kozhikode (Calicut), Kerala.",
+        provider: {
+          "@id": "https://warm-liger-7e5ba3.netlify.app/#organization",
+        },
+        areaServed: kozhikodeAreas.map((area) => ({
+          "@type": "AdministrativeArea",
+          name: `${area}, Kozhikode`,
+        })),
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Waste Pickup Packages",
+          itemListElement: packages.map((pkg) => ({
+            "@type": "Offer",
+            name: pkg.name,
+            price: pkg.price.replace(/[^\d]/g, "") || "399",
+            priceCurrency: "INR",
+          })),
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://warm-liger-7e5ba3.netlify.app/services/waste-pickup-kozhikode#faq",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      },
+    ],
   };
 
   return (
@@ -198,7 +217,7 @@ export default function WastePickupKozhikodePage() {
       {/* JSON-LD Script for Google SEO */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
 
       {/* Hero Section */}
@@ -207,7 +226,7 @@ export default function WastePickupKozhikodePage() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/95 px-3.5 py-1.5 text-xs font-bold text-brand-dark shadow-sm backdrop-blur">
-                <Truck className="h-3.5 w-3.5 text-brand" /> #1 Doorstep Waste Collection in Kozhikode (Calicut)
+                <Truck className="h-3.5 w-3.5 text-brand" /> Doorstep Waste Collection in Kozhikode (Calicut)
               </div>
 
               <h1 className="mt-4 text-3xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl sm:leading-[1.12]">
@@ -273,16 +292,14 @@ export default function WastePickupKozhikodePage() {
                   </div>
                 </div>
 
-                {/* Rating badge */}
+                {/* Quality commitment badge */}
                 <div className="mt-3 flex items-center justify-between px-2 py-1">
-                  <div className="flex items-center gap-1 text-amber-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                    ))}
-                    <span className="ml-1 text-xs font-bold text-foreground">4.9 / 5.0</span>
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-brand-dark">
+                    <ShieldCheck className="h-4 w-4 text-brand" />
+                    Verified Local Collectors
                   </div>
                   <span className="text-xs font-medium text-foreground/60">
-                    180+ Kozhikode Families
+                    Mankavu Hub · 673007
                   </span>
                 </div>
               </div>
@@ -384,39 +401,43 @@ export default function WastePickupKozhikodePage() {
         </div>
       </section>
 
-      {/* Customer Reviews from Kozhikode */}
+      {/* Our Standards Section (Replaces fabricated reviews for transparent E-E-A-T) */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
         <div className="text-center">
           <span className="inline-block rounded-full bg-brand-light px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-dark">
-            Local Reviews
+            Our Service Commitment
           </span>
           <h2 className="mt-2 text-2xl font-black text-foreground sm:text-4xl">
-            What Kozhikode Residents Say About Bin Friend
+            Why Kozhikode Chooses Bin Friend
           </h2>
+          <p className="mx-auto mt-2 max-w-xl text-sm sm:text-base text-foreground/60">
+            Professional waste management built on punctuality, safety, and certified environmental recycling.
+          </p>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {reviews.map((r) => (
-            <div
-              key={r.name}
-              className="flex flex-col justify-between rounded-3xl border border-black/8 bg-white p-6 shadow-sm"
-            >
-              <div>
-                <div className="flex gap-1 text-amber-400">
-                  {[...Array(r.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-amber-400" />
-                  ))}
+          {serviceStandards.map((std, idx) => {
+            const Icon = std.icon;
+            return (
+              <div
+                key={idx}
+                className="flex flex-col justify-between rounded-3xl border border-black/8 bg-white p-7 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-light text-brand mb-5">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{std.title}</h3>
+                  <p className="mt-2.5 text-sm text-foreground/70 leading-relaxed">
+                    {std.description}
+                  </p>
                 </div>
-                <p className="mt-3 text-sm text-foreground/70 leading-relaxed italic">
-                  &ldquo;{r.text}&rdquo;
-                </p>
+                <div className="mt-6 border-t border-black/5 pt-4 text-xs font-semibold text-brand">
+                  Kozhikode Service Guarantee
+                </div>
               </div>
-              <div className="mt-5 border-t border-black/5 pt-4">
-                <div className="text-sm font-bold text-foreground">{r.name}</div>
-                <div className="text-xs text-brand font-medium">{r.area}</div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -479,4 +500,3 @@ export default function WastePickupKozhikodePage() {
     </div>
   );
 }
-

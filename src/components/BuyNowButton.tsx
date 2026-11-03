@@ -3,9 +3,17 @@
 import { MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/config";
 import type { Product } from "@/lib/products";
+import { trackEvent } from "@/lib/gtm";
 
 export default function BuyNowButton({ product, className }: { product: Product; className?: string }) {
   function handleClick() {
+    trackEvent("begin_checkout", {
+      item_name: product.name,
+      price: product.price,
+      currency: "INR",
+      capacity: product.capacity,
+    });
+
     const message = `Hi Bin Friend! I'd like to buy the *${product.name}* (${product.capacity}) priced at ₹${product.price}. Please share payment & delivery details.`;
     window.open(buildWhatsAppLink(message), "_blank", "noopener,noreferrer");
   }
