@@ -16,19 +16,20 @@ export default function ServiceCard({ service }: { service: Service }) {
       <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-100">
         <Image
           src={service.image}
-          alt={service.name}
+          alt={`${service.name} - Bin Friend Kozhikode service`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         
         {/* Floating Icon badge */}
         <div className="absolute bottom-3 left-4 flex items-center gap-2">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand shadow-md">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand shadow-md" aria-hidden="true">
             <ServiceIcon icon={service.icon} className="h-5 w-5" />
           </span>
-          <span className="rounded-full bg-black/50 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
+          <span className="rounded-full bg-black/60 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur">
             {service.priceLabel}
           </span>
         </div>

@@ -66,7 +66,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-semibold transition-colors hover:text-brand ${
-                  pathname === link.href ? "text-brand" : "text-foreground/75"
+                  pathname === link.href ? "text-brand" : "text-foreground/85"
                 }`}
               >
                 {link.label}
@@ -81,9 +81,9 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("whatsapp_click", { location: "desktop_header" })}
-              className="flex items-center gap-1.5 rounded-full border border-brand/20 bg-brand-light/50 px-4 py-2 text-xs font-bold text-brand-dark transition-all hover:bg-brand-light active:scale-95"
+              className="flex items-center gap-1.5 rounded-full border border-brand/20 bg-brand-light/60 px-4 py-2 text-xs font-bold text-brand-dark transition-all hover:bg-brand-light active:scale-95"
             >
-              <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
+              <MessageCircle className="h-3.5 w-3.5" aria-hidden="true" /> WhatsApp
             </a>
             <Link
               href="/book"
@@ -102,7 +102,7 @@ export default function Navbar() {
             className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-100 text-foreground transition-colors hover:bg-brand-light hover:text-brand active:scale-95 md:hidden"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {open ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
           </button>
         </div>
       </header>

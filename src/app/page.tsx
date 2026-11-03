@@ -119,10 +119,11 @@ export default function Home() {
                         <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-white">
                           <Image
                             src={p.image}
-                            alt={p.name}
+                            alt={`${p.name} - featured dustbin`}
                             fill
                             className="object-cover transition-transform group-hover:scale-105"
                             sizes="120px"
+                            loading="lazy"
                           />
                         </div>
                         <span className="mt-1.5 truncate text-[11px] font-semibold text-foreground">
@@ -308,7 +309,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-brand-dark shadow-lg transition-transform hover:scale-105 active:scale-95"
             >
-              <MessageCircle className="h-4 w-4 text-brand" /> Chat on WhatsApp
+              <MessageCircle className="h-4 w-4 text-brand" aria-hidden="true" /> Chat on WhatsApp
             </a>
             <Link
               href="/shop"

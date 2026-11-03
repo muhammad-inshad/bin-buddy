@@ -151,11 +151,11 @@ export default function BookPickupForm() {
         type="submit"
         className="flex w-full min-h-[48px] items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-dark active:scale-[0.99]"
       >
-        <MessageCircle className="h-5 w-5" />
+        <MessageCircle className="h-5 w-5" aria-hidden="true" />
         Continue to Confirm on WhatsApp
       </button>
 
-      <p className="text-center text-xs text-foreground/50">
+      <p className="text-center text-xs text-foreground/80">
         We will open WhatsApp with your details cleanly pre-filled — just tap send to confirm your slot!
       </p>
     </form>

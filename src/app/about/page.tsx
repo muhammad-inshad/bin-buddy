@@ -106,11 +106,11 @@ export default function AboutPage() {
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-black/10 pt-6">
               <div>
                 <div className="text-2xl font-black text-brand">Mankavu Hub</div>
-                <div className="text-xs font-medium text-foreground/60 sm:text-sm">Kozhikode Center (673007)</div>
+                <div className="text-xs font-semibold text-foreground/80 sm:text-sm">Kozhikode Center (673007)</div>
               </div>
               <div>
                 <div className="text-2xl font-black text-brand">100% Green</div>
-                <div className="text-xs font-medium text-foreground/60 sm:text-sm">Authorized Kerala Recycling</div>
+                <div className="text-xs font-semibold text-foreground/80 sm:text-sm">Authorized Kerala Recycling</div>
               </div>
             </div>
           </div>
@@ -124,6 +124,7 @@ export default function AboutPage() {
                 fill
                 className="object-contain p-2 sm:p-4"
                 sizes="(max-width: 1024px) 100vw, 550px"
+                loading="lazy"
               />
             </div>
           </div>
@@ -136,7 +137,7 @@ export default function AboutPage() {
           <div className="text-center">
             <div className="text-xs font-bold uppercase tracking-wider text-brand">Core Values</div>
             <h2 className="mt-1 text-2xl font-black text-foreground sm:text-4xl">What We Stand For</h2>
-            <p className="mx-auto mt-2 max-w-lg text-sm text-foreground/60">
+            <p className="mx-auto mt-2 max-w-lg text-sm text-foreground/85">
               The foundational principles guiding every pickup, customer interaction, and product we design.
             </p>
           </div>
@@ -148,11 +149,11 @@ export default function AboutPage() {
                 className="flex flex-col sm:flex-row items-start gap-4 rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition-all hover:shadow-md"
               >
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-light text-brand">
-                  <v.icon className="h-6 w-6" />
+                  <v.icon className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <div>
                   <h3 className="font-bold text-foreground text-base sm:text-lg">{v.title}</h3>
-                  <p className="mt-1.5 text-sm text-foreground/65 leading-relaxed">{v.desc}</p>
+                  <p className="mt-1.5 text-sm text-foreground/85 leading-relaxed">{v.desc}</p>
                 </div>
               </div>
             ))}

@@ -76,9 +76,9 @@ export default function BlogPage() {
 
             {/* Content */}
             <div className="flex flex-1 flex-col p-6 sm:p-7">
-              <div className="flex items-center gap-3 text-xs text-foreground/50">
+              <div className="flex items-center gap-3 text-xs text-foreground/80 font-medium">
                 <span className="flex items-center gap-1">
-                  <Calendar className="h-3.5 w-3.5" />
+                  <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
                   {new Date(post.date).toLocaleDateString("en-IN", {
                     year: "numeric",
                     month: "short",
@@ -87,7 +87,7 @@ export default function BlogPage() {
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-1">
-                  <User className="h-3.5 w-3.5" />
+                  <User className="h-3.5 w-3.5" aria-hidden="true" />
                   {post.author}
                 </span>
               </div>
@@ -96,12 +96,12 @@ export default function BlogPage() {
                 {post.title}
               </h2>
 
-              <p className="mt-3 flex-1 text-sm text-foreground/65 leading-relaxed">
+              <p className="mt-3 flex-1 text-sm text-foreground/85 leading-relaxed">
                 {post.excerpt}
               </p>
 
               <div className="mt-5 flex items-center gap-1.5 text-sm font-bold text-brand group-hover:translate-x-1 transition-transform">
-                Read full guide <ArrowRight className="h-4 w-4" />
+                Read full guide <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </div>
             </div>
           </Link>

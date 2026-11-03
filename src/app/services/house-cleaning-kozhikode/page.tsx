@@ -223,28 +223,28 @@ export default function HouseCleaningKozhikodePage() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/95 px-3.5 py-1.5 text-xs font-bold text-brand-dark shadow-sm backdrop-blur">
-                <Sparkles className="h-3.5 w-3.5 text-brand" /> Top Rated in Kozhikode (Calicut)
+                <Sparkles className="h-3.5 w-3.5 text-brand" aria-hidden="true" /> Top Rated in Kozhikode (Calicut)
               </div>
 
               <h1 className="mt-4 text-3xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl sm:leading-[1.12]">
                 Best House Cleaning Services in <span className="text-brand">Kozhikode</span>
               </h1>
 
-              <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/70 leading-relaxed">
+              <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/85 leading-relaxed">
                 Looking for reliable, professional house cleaners in Kozhikode? Bin Friend delivers
                 thorough deep cleaning for apartments, independent houses, and villas with background-verified staff and eco-friendly products.
               </p>
 
               {/* Badges */}
-              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-xs sm:text-sm font-semibold text-foreground/75">
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-xs sm:text-sm font-semibold text-foreground/85">
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> Same-day confirmation
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> Same-day confirmation
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> Pay after inspection
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> Pay after inspection
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> All equipment provided
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> All equipment provided
                 </span>
               </div>
 

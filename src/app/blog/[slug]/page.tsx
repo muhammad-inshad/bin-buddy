@@ -110,13 +110,13 @@ export default async function BlogPostPage({
           {post.title}
         </h1>
 
-        <div className="mt-4 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-foreground/60 border-b border-black/10 pb-6">
+        <div className="mt-4 flex flex-wrap items-center gap-4 text-xs sm:text-sm text-foreground/80 border-b border-black/10 pb-6">
           <span className="flex items-center gap-1.5">
-            <User className="h-4 w-4 text-brand" /> {post.author}
+            <User className="h-4 w-4 text-brand" aria-hidden="true" /> {post.author}
           </span>
           <span>•</span>
           <span className="flex items-center gap-1.5">
-            <Calendar className="h-4 w-4 text-brand" />
+            <Calendar className="h-4 w-4 text-brand" aria-hidden="true" />
             {new Date(post.date).toLocaleDateString("en-IN", {
               year: "numeric",
               month: "long",
@@ -125,7 +125,7 @@ export default async function BlogPostPage({
           </span>
           <span>•</span>
           <span className="flex items-center gap-1.5">
-            <Clock className="h-4 w-4 text-brand" /> 3 min read
+            <Clock className="h-4 w-4 text-brand" aria-hidden="true" /> 3 min read
           </span>
         </div>
       </div>

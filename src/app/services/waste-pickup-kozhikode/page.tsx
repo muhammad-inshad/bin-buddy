@@ -226,27 +226,27 @@ export default function WastePickupKozhikodePage() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white/95 px-3.5 py-1.5 text-xs font-bold text-brand-dark shadow-sm backdrop-blur">
-                <Truck className="h-3.5 w-3.5 text-brand" /> Doorstep Waste Collection in Kozhikode (Calicut)
+                <Truck className="h-3.5 w-3.5 text-brand" aria-hidden="true" /> Doorstep Waste Collection in Kozhikode (Calicut)
               </div>
 
               <h1 className="mt-4 text-3xl font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl sm:leading-[1.12]">
                 Waste Pickup Service in <span className="text-brand">Kozhikode</span>
               </h1>
 
-              <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/70 leading-relaxed">
+              <p className="mt-4 max-w-xl text-base sm:text-lg text-foreground/85 leading-relaxed">
                 Looking for reliable, doorstep waste pickup in Kozhikode? Bin Friend provides punctual household garbage collection, dry recycling, scrap clearance, and society waste solutions across Calicut with 100% verified green recycling.
               </p>
 
               {/* Badges */}
-              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-xs sm:text-sm font-semibold text-foreground/75">
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 text-xs sm:text-sm font-semibold text-foreground/85">
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> Hub at Mankavu, Kozhikode
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> Hub at Mankavu, Kozhikode
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> Punctual doorstep pickup
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> Punctual doorstep pickup
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-brand" /> No long-term lock-in
+                  <CheckCircle2 className="h-4 w-4 text-brand" aria-hidden="true" /> No long-term lock-in
                 </span>
               </div>
 

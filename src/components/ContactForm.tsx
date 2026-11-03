@@ -101,11 +101,11 @@ export default function ContactForm() {
         aria-label="Send message on WhatsApp"
         className="flex w-full min-h-[48px] items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-brand-dark active:scale-[0.99]"
       >
-        <MessageCircle className="h-5 w-5" />
+        <MessageCircle className="h-5 w-5" aria-hidden="true" />
         Send Message on WhatsApp
       </button>
 
-      <p className="text-center text-xs text-foreground/75">
+      <p className="text-center text-xs text-foreground/80">
         Our customer support team typically responds within a few minutes during business hours.
       </p>
     </form>

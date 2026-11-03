@@ -10,11 +10,11 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="relative aspect-4/3 w-full overflow-hidden bg-slate-100">
         <Image
           src={product.image}
-          alt={product.name}
+          alt={`${product.name} - ${product.capacity} waste bin`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          priority={false}
+          loading="lazy"
         />
         {/* Capacity badge */}
         <div className="absolute right-3 top-3">

@@ -179,6 +179,11 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full flex flex-col bg-background text-foreground overflow-x-hidden selection:bg-brand-light selection:text-brand-dark">
+        {/* Skip to Main Content Link for Keyboard Accessibility */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -190,7 +195,7 @@ export default function RootLayout({
         </noscript>
 
         <Navbar />
-        <main className="flex-1 w-full">{children}</main>
+        <main id="main-content" className="flex-1 w-full">{children}</main>
         <Footer />
       </body>
     </html>
