@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, Truck, Recycle, Leaf, Sparkles, MessageCircle } from "lucide-react";
@@ -6,6 +7,15 @@ import ServiceCard from "@/components/ServiceCard";
 import { products } from "@/lib/products";
 import { services } from "@/lib/services";
 import { buildWhatsAppLink } from "@/lib/config";
+
+export const metadata: Metadata = {
+  title: "Bin Friend — Doorstep Waste Pickup & House Cleaning in Kozhikode",
+  description:
+    "Reliable doorstep waste pickup, garbage collection, scrap recycling, and professional deep house cleaning across Kozhikode (Calicut), Kerala. Coordinate easily on WhatsApp.",
+  alternates: {
+    canonical: "https://warm-liger-7e5ba3.netlify.app",
+  },
+};
 
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
