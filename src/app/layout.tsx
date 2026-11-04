@@ -101,7 +101,20 @@ const businessJsonLd = {
   image: "https://warm-liger-7e5ba3.netlify.app/icon.svg",
   url: "https://warm-liger-7e5ba3.netlify.app/",
   telephone: "+91-7025034758",
-  priceRange: "₹200 - ₹20000",
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Waste Pickup and Cleaning Services",
+      "priceCurrency": "INR",
+      "price": "200", 
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": "200",
+        "maxPrice": "20000",
+        "priceCurrency": "INR"
+      }
+    }
+  ],
   openingHours: "Mo-Su 09:00-21:00",
   address: {
     "@type": "PostalAddress",
