@@ -101,7 +101,7 @@ const businessJsonLd = {
   image: "https://warm-liger-7e5ba3.netlify.app/icon.svg",
   url: "https://warm-liger-7e5ba3.netlify.app/",
   telephone: "+91-7025034758",
-  priceRange: "₹2000",
+  priceRange: "₹200 - ₹20000",
   openingHours: "Mo-Su 09:00-21:00",
   address: {
     "@type": "PostalAddress",
